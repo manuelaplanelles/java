@@ -1,6 +1,6 @@
 package UD4;
 
-public class Repositividad {
+public class Recursividad {
 
     static int limite = 10;
     static String frase ="Hola soy una frase al reves";
