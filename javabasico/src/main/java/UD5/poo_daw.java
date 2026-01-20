@@ -1,60 +1,78 @@
 package UD5;
 
-public class poo_daw {
-    static void main() {
-
-        //Perro perro1 = new Perro("caniche","permanent",1,4,"verde"); //raza, pelo, peso, peso, patas, color
-        //System.out.println("color: " + perro1.color + "- raza: " + perro1.raza);
-        perro2.setColor("negro");
-        perro.setRaza("caniche");
-        System.out.println(perro2.getcolor());
-
+public class perro {
+    public static void main(String[] args) {
+   {
         private String raza;
+
         private String pelo;
         private int peso;
-        private  int patas;
+        private int patas;
         private String color;
 
-        public Perro (String raza, String pelo, int peso, int patas, String color){
+    public Perro (String raza, String pelo, int peso, int patas, String color){
+
             this.raza = raza;
             this.pelo = pelo;
             this.peso = peso;
             this.patas = patas;
-            this.color = color;
+            this.color =  color;
+
         }
 
+    public Perro (){
 
-        //GET
-        public String getRaza() { //se limita a devolver la raza unicamente
+        }
+
+        public void imprimirFicha(){
+
+            System.out.println("Raza: " + raza);
+            System.out.println("Pelo: " + pelo);
+            System.out.println("Peso: " + peso);
+            System.out.println("Patas: " + patas);
+            System.out.println("Color: " + color);
+
+        }
+
+        public String getRaza(){
             return raza;
         }
-        public void setRaza(String raza){
-            this.raza=raza; //el de la derecha es la clase y el de la izq es el atrubuto y se diferencia con el this
+
+        public void setRaza (String raza){
+            this.raza = raza;
         }
-        public void getPelo (){
+
+        public String getPelo (){
             return pelo;
         }
-        public void getPelo (String pelo){
+
+        public void setPelo (String pelo){
             this.pelo = pelo;
         }
-        public void getPeso (){
+
+        public int getPeso (){
             return peso;
         }
-        public void getPeso (String peso){
+
+        public void setPeso (int peso){
             this.peso = peso;
         }
-        public void getPatas (){
+
+        public int getPatas (){
             return patas;
         }
-        public void getPatas (String patas){
+
+        public void setPatas (int patas){
             this.patas = patas;
         }
-        public void getColor (){
+
+        public String getColor (){
             return color;
         }
-        public void getColor (String color){
+
+        public void setColor (String color){
             this.color = color;
         }
 
+
     }
-}
