@@ -1,6 +1,5 @@
 package UD5;
 
-import javax.swing.plaf.PanelUI;
 import java.util.Random;
 
 public class paciente {
@@ -90,6 +89,30 @@ public class paciente {
         //this(null,0,DEF_SEXO,0,0);
         this.sexo = DEF_SEXO;
         this.dni = generarDNI();
+    }
+    public void paciente1(String nombre, int edad, char sexo, double peso, int altura){ //creador
+            this.nombre = nombre;
+            this.edad = edad;
+            this.dni = generarDNI();
+            this.sexo = comprobarSexo(sexo);
+            this.peso = peso;
+            this.altura = altura;
+        }
+    private void paciente2(String nombre, int edad, char sexo, double peso, int altura){ //creador
+        this.nombre = nombre;
+        this.edad = edad;
+        this.dni = generarDNI();
+        this.sexo = comprobarSexo(sexo);
+        this.peso = 0;
+        this.altura = 0;
+    }
+    public void paciente3(String nombre, int edad, char sexo, double peso, int altura){ //creador
+        this.nombre = nombre;
+        this.edad = edad;
+        this.dni = generarDNI();
+        this.sexo = comprobarSexo(sexo);
+        this.peso = peso;
+        this.altura = altura;
     }
 
     private String generarDNI(){
