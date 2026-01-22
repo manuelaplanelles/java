@@ -71,6 +71,7 @@ public class ejercicio1 {
 
     }
     public void imprimirFicha() {
+        System.out.println("Hola, ");
         System.out.println("Nombre: " + nombre);
         System.out.println("Apellidos: " + apellidos);
         System.out.println("DNI: " + dni);

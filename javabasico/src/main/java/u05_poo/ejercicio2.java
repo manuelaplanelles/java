@@ -7,4 +7,12 @@ public class ejercicio2 {
         c) Modificar profesión.
         d) Modificar ciudad de referencia.
      */
+    //Atributos
+    String profesion;
+    String ciudad;
+
+    //Metodo
+    public void profesionCiudad(){
+        System.out.println("Me dedico a " + profesion + " en " + ciudad + ".");
+    }
 }
