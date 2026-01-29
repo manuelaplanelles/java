@@ -1,4 +1,4 @@
-package miprimerjava;
+package u01_introJava;
 
 import java.util.Scanner;
 
