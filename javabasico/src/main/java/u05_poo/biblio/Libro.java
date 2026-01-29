@@ -1,7 +1,6 @@
 package u05_poo.biblio;
 
 public class Libro {
-
     private static String ID_NOMBRE = "LIB";
     private static int cantidadLibros = 0;
     private static int librosDisponibles = 0;

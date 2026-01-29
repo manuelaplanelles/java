@@ -46,7 +46,4 @@ public class Prestamo {
                 ", fecha=" + fecha +
                 '}';
     }
-
-
-
 }
