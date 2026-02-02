@@ -1,46 +1,49 @@
 package u05_poo.Biblioteca;
 
-public class EstudianteApp {
+import java.time.LocalDateTime;
 
-    static void main() {
+public class Prestamo {
 
-        Estudiante ivan = new Estudiante("Iván","1DAW","alumno@mutxamel.com");
+    private Estudiante estudiante;
+    private Libro libro;
+    private LocalDateTime fecha;
 
-        System.out.println(ivan.getNia());
+    public Prestamo (Estudiante estudiante, Libro libro){
+        fecha = LocalDateTime.now();
+        this.estudiante=estudiante;
+        this.libro=libro;
+    }
 
-        Estudiante alejandro = new Estudiante("alejandro");
+    public Estudiante getEstudiante() {
+        return estudiante;
+    }
 
-        System.out.println(alejandro.getNia());
+    public void setEstudiante(Estudiante estudiante) {
+        this.estudiante = estudiante;
+    }
 
-        System.out.println("Estudiantes creados: " + Estudiante.obtenerTotalEstudiantes());
+    public Libro getLibro() {
+        return libro;
+    }
 
-        System.out.println(Estudiante.validarCorreo("hola@iesmutxamel.com"));
-        System.out.println(Estudiante.validarCorreo("hola@alu.edu.gva.es"));
+    public void setLibro(Libro libro) {
+        this.libro = libro;
+    }
 
-        Editorial anaya = new Editorial("ANAYA","España");
+    public LocalDateTime getFecha() {
+        return fecha;
+    }
 
-        Libro las_48_leyes = new Libro("Las 48 leyes del poder","Robert Greene", anaya);
+    public void setFecha(LocalDateTime fecha) {
+        this.fecha = fecha;
+    }
 
-        System.out.println(las_48_leyes);
-
-        Libro habitos_atomicos = new Libro("Hábitos atómicos","James Clear", anaya);
-
-        System.out.println(habitos_atomicos);
-
-        las_48_leyes.prestar(ivan);
-
-        System.out.println(las_48_leyes.estaDisponible());
-        System.out.println(ivan);
-
-        habitos_atomicos.prestar(ivan);
-
-        System.out.println("Total libros creados: " + Libro.getCantidadLibros());
-        System.out.println("Libros disponibles: " + Libro.getLibrosDisponibles());
-
-        las_48_leyes.devolver();
-        las_48_leyes.devolver();
-        System.out.println(las_48_leyes.estaDisponible());
-
-
+    @Override
+    public String toString() {
+        return "Prestamo{" +
+                "estudiante=" + estudiante +
+                ", libro=" + libro +
+                ", fecha=" + fecha +
+                '}';
     }
 }
