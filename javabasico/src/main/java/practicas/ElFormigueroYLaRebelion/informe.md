@@ -1,5 +1,5 @@
 # Práctica 1. El Fotmiguero y la Rebelión.
-![Banner](/img/banner.png)
+![Banner](/ElFormigueroYLaRebelion/img/banner.png)
 ## ÍNDICE
 1. [Intro](https://github.com/manuelaplanelles/1Daw/blob/main/javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/informe.md#1-intro)
 2. [Estructura de clases (UML)](https://github.com/manuelaplanelles/1Daw/edit/main/javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/informe.md#2-estructura-de-clases-uml)
@@ -18,6 +18,7 @@
 # 3. Programa principal
 # 4. pruebas
 # 5. Entrega
+
 
 
 
