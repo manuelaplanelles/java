@@ -1,16 +1,10 @@
 package u05_poo.chalet;
 
+
 public class Propietario {
+
     private String nombre;
     private int edad;
-
-    @Override
-    public String toString() {
-        return "Propietario{" +
-                "nombre='" + nombre + '\'' +
-                ", edad=" + edad +
-                '}';
-    }
 
     public Propietario (String nombre, int edad){
         this.nombre=nombre;
@@ -32,4 +26,16 @@ public class Propietario {
     public void setEdad(int edad) {
         this.edad = edad;
     }
+
+    @Override
+    public String toString() {
+        return "Propietario{" +
+                "nombre='" + nombre + '\'' +
+                ", edad=" + edad +
+                '}';
+    }
+
+
+
+
 }

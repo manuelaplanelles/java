@@ -4,39 +4,40 @@ import java.util.ArrayList;
 
 public class Habitacion {
 
-    private double metros;
     private String nombre;
-    private ArrayList<Electrodomesticos> listaElectrodomesticos;
+    private double metros;
+    private ArrayList<Electrodomestico> listaElectrodomesticos;
 
     public Habitacion (String nombre, double metros){
-        this.nombre=nombre;
         this.metros=metros;
-        listaElectrodomesticos=new ArrayList<>();
+        this.nombre=nombre;
+        listaElectrodomesticos = new ArrayList<>();
     }
-    public void crearElectrodomesticos(String nombre, int consumo){
-        listaElectrodomesticos.add(new Electrodomesticos(nombre, consumo));
 
+    public void insertarElectrodomestico(String nombre, double consumo){
+        Electrodomestico electrodomestico =  new Electrodomestico(nombre,consumo);
+        listaElectrodomesticos.add(electrodomestico);
+        System.out.println(nombre + " añadido.");
     }
-    public void mostrarElectrodomesticos(String nombre, int consumo){
-        for(Electrodomesticos electrodomesticos : listaElectrodomesticos){
-            System.out.println(getNombre());
+
+    public void mostrarElectrodomesticos(){
+
+        System.out.println("Electrodomésticos de la habitación " + nombre);
+
+        for (Electrodomestico electrodomestico : listaElectrodomesticos){
+
+            System.out.println("- " + electrodomestico.getNombre() + " con un consumo de " + electrodomestico.getConsumo() + "kwh");
+
         }
+
     }
-    public void calcularConsumo(int consumo){
-        double consumoTotal = 0;
-        for (Electrodomesticos electrodomesticos : listaElectrodomesticos){
-            consumoTotal += electrodomesticos.getConsumo();
+
+    public double calcularConsumo(){
+        double consumo = 0;
+        for (Electrodomestico electrodomestico : listaElectrodomesticos){
+            consumo += electrodomestico.getConsumo();
         }
-        return consumoTotal;
-    }
-
-
-    public double getMetros() {
-        return metros;
-    }
-
-    public void setMetros(double metros) {
-        this.metros = metros;
+        return consumo;
     }
 
     public String getNombre() {
@@ -47,12 +48,12 @@ public class Habitacion {
         this.nombre = nombre;
     }
 
-    public ArrayList<Electrodomesticos> getListaHelectrodomesticos() {
-        return listaElectrodomesticos;
+    public double getMetros() {
+        return metros;
     }
 
-    public void setListaHelectrodomesticos(ArrayList<Electrodomesticos> listaHelectrodomesticos) {
-        this.listaElectrodomesticos = listaHelectrodomesticos;
+    public void setMetros(double metros) {
+        this.metros = metros;
     }
 
     @Override
@@ -60,9 +61,10 @@ public class Habitacion {
         return "Habitacion{" +
                 "nombre='" + nombre + '\'' +
                 ", metros=" + metros +
-                "Elctrodomestico " +
-                listaElectrodomesticos +
+                ", electrodomesticos=" + listaElectrodomesticos +
                 '}';
     }
+
+
 
 }
