@@ -1,11 +1,33 @@
+![Banner](/javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/img_doc/banner.png)
+
 # Práctica 1. "El Formiguero" y "La Rebelión"
 
-**Instituto:** IES Mutxamel  
-**Ciclo Formativo:** Desarrollo de Aplicaciones Web (DAW)  
-**Asignatura:** Programación 1  
-**Curso:** 2024/2025
+Manuela Planelles - 1º DAW - IES Mutxamel
 
 ---
+
+## Índice
+
+1. [Introducción](#1-introducción)
+2. [Objetivos de la práctica](#2-objetivos-de-la-práctica)
+3. [Diseño e Implementación](#3-diseño-e-implementación)
+   - [3.1. Estructura de clases](#31-estructura-de-clases)
+     - [3.1.1. Clase `AppProgramas`](#311-clase-appprogramas)
+     - [3.1.2. Clase `Cadena`](#312-clase-cadena)
+     - [3.1.3. Clase `Programa`](#313-clase-programa)
+     - [3.1.4. Clase `Empleado`](#314-clase-empleado)
+     - [3.1.5. Clase `Invitado`](#315-clase-invitado)
+   - [3.2. Relaciones entre clases](#32-relaciones-entre-clases)
+   - [3.3. Métodos requeridos](#33-métodos-requeridos)
+4. [Plan de pruebas](#4-plan-de-pruebas)
+5. [Ejemplo de funcionamiento](#5-ejemplo-de-funcionamiento)
+6. [Entrega](#6-entrega)
+   - [6.1. Requisitos de entrega](#61-requisitos-de-entrega)
+   - [6.2. Estructura del repositorio](#62-estructura-del-repositorio)
+7. [Conclusiones](#7-conclusiones)
+
+---
+
 
 ## 1. Introducción
 
@@ -146,3 +168,4 @@ public static void main (String[] args){
     // insertamos invitados en el programa
     // ver invitados del programa
 }
+
