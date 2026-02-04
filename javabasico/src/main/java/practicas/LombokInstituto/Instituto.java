@@ -14,12 +14,31 @@ public class Instituto {
     @Setter
     private String poblacion;
 
-    private ArrayList<Estudiante> listaEstudiante;
-    private ArrayList<Curso> listaCurso;
+    private ArrayList<Estudiante> listaEstudiantes;
+    private ArrayList<Curso> listaCursos;
 
     public Instituto(String nombre) {
         this.nombre = Objects.requireNonNullElse(nombre, "Instituto sin nombre");
-        this.listaEstudiante = new ArrayList<>();
-        this.listaCurso = new ArrayList<>();
+        this.listaEstudiantes = new ArrayList<>();
+        this.listaCursos = new ArrayList<>();
     }
+    public void agregarEstudiante(Estudiante estudiante) {
+        if (estudiante != null) {
+            this.listaEstudiantes.add(estudiante);
+        } else {
+            System.out.println("No se puede agregar un estudiante nulo.");
+        }
+    }
+    public void agregarCurso(Curso curso) {
+        if (curso == null) {
+            System.out.println("No se puede agregar un curso nulo.");
+            return;
+        }
+        if (!listaCursos.contains(curso)) {
+            this.listaCursos.add(curso);
+        } else {
+            System.out.println("El curso ya existe en el instituto.");
+        }
+    }
+
 }
