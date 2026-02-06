@@ -16,7 +16,6 @@ public class Programa {
         this.listaEmpleados = new ArrayList<>();
         this.listaInvitados = new ArrayList<>();
 
-        // Creamos el director y lo añadimos a la lista (Paso 1)
         this.director = new Empleado(nombreDirector, "director", null);
         this.listaEmpleados.add(this.director);
 
