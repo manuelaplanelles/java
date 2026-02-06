@@ -11,14 +11,14 @@ public class Programa {
     private ArrayList<Invitado> listaInvitado = new ArrayList<>();
     private Empleado director;
 
-    public Programa(String nombre, Cadena cadena, int temporadas, ArrayList listaEmpleado, ArrayList listaInvitado) {
+    public Programa(String nombre, Cadena cadena, String nombreDirector) {
         this.nombre = nombre;
         this.cadena = cadena;
         this.temporadas = 0;
         this.listaInvitado = listaInvitado;
         this.listaEmpleado = listaEmpleado;
 
-        this.director = new Empleado("Leticia Sabater", "director", null);
+        this.director = new Empleado(nombreDirector, "director", null);
         this.listaEmpleado.add(this.director);
 
         if (cadena != null) {
@@ -100,5 +100,16 @@ public class Programa {
 
     public void setDirector(Empleado director) {
         this.director = director;
+    }
+
+    @Override
+    public String toString() {
+        String nombreCadena = (cadena != null) ? cadena.getNombre() : "Sin cadena";
+        return "Programa: " + nombre + "\n" +
+                "Cadena: " + nombreCadena + "\n" +
+                "Temporadas: " + temporadas + "\n" +
+                "Director: " + director.getNombre() + "\n" +
+                "Empleados: " + listaEmpleado.size() + "\n" +
+                "Invitados: " + listaInvitado.size() + "\n";
     }
 }
