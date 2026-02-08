@@ -8,9 +8,9 @@ Manuela Planelles - 1º DAW - IES Mutxamel
 
 ## Índice
 
-1. [Introducción]([#1-introducción](https://github.com/manuelaplanelles/1Daw/blob/main/javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/README.md#1-introducci%C3%B3n))
-2. [Objetivos de la práctica](#2-objetivos-de-la-práctica)
-3. [Diseño e Implementación del programa.](#3-diseño-e-implementación)
+1. [Introducción](https://github.com/manuelaplanelles/1Daw/blob/main/javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/README.md#1-introducci%C3%B3n)
+2. [Objetivos de la práctica](https://github.com/manuelaplanelles/1Daw/blob/main/javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/README.md#2-objetivos-de-la-pr%C3%A1ctica)
+3. [Diseño e Implementación del programa.](https://github.com/manuelaplanelles/1Daw/blob/main/javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/README.md#3-dise%C3%B1o-e-implementaci%C3%B3n-del-programa)
    - [3.1. Estructura de clases](#31-estructura-de-clases)
      - [3.1.1. Clase `AppProgramas`](#311-clase-appprogramas)
      - [3.1.4. Clase `Empleado`](#314-clase-empleado)
