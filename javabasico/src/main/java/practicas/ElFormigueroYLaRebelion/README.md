@@ -230,7 +230,7 @@ public class Empleado {
 ## 5. Ejemplo de funcionamiento
 
 ##### Comprobamos  la lista de empleados, un empleado no puede ser director, y si no es ningún de los valores se guarda como pte
-  ![Clases y atributos](./img_doc/clases_y_atributos.jpg)
+  ![Clases y atributos](./img_doc/pruebas_empleado.jpg)
 
 
 ---
@@ -248,6 +248,7 @@ Pruebas unitarias de los método implementados con JUnit5.
 ## 8. Diagrama UML:** Crear el diagrama UML con PlantUML.
 
 ---
+
 
 
 
