@@ -54,27 +54,71 @@ La práctica persigue los siguientes objetivos:
 
 ### 3.1. Estructura de clases
 
-Creamos las clases que se solicitan con sus atributos 
-![Banner](/javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/img_doc/banner.png)
+Creamos las clases que se solicitan con sus atributos.
+
+![clases y atributos](javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/img_doc/clases y atributos.jpg)
+
+Creamos los constructores, getters, setters y metodos:
+**Clase Empleado**
+- Para generar el Id automático creamos la función .format para formatear el número con 3 digitos y un contador que va incrementando
+```java
+private String generarId(){
+        String id = String.format("EP%03d", contadorId);
+        contadorId++;
+        return id;
+    }
+```
+- Creamos el contructor llamando a setCargo para validar el cargo y comprobar que si es director sea nulo.
+```java
+ public Empleado(String nombre, String cargo, Empleado director) {
+        this.id = generarId();
+        this.nombre = nombre;
+        setCargo(cargo);
+
+        if (this.cargo.equals("director")) {
+            this.director = null;
+        } else {
+            this.director = director;
+        }
+    }
+```
+- Le damos valores a cargo y si no es uno de eso se indica con valor por defecto null. Esto lo indicamos en el método setCargo.
+```java
+   public void setCargo(String cargo) {
+        String[] cargosValidos = {"director", "técnico", "presentador", "colaborador"};
+        boolean esValido = false;
+
+        for (String cargoValido : cargosValidos) {
+            if (cargoValido.equalsIgnoreCase(cargo)) {
+                esValido = true;
+                break;
+            }
+        }
+        if (esValido) {
+            this.cargo = cargo.toLowerCase();
+        } else {
+            this.cargo = "pte";
+        }
+    }
+ ```
+- Sobre escribimos el método toString, para mostrar el nombre del director o  si no hay.
+```java
+ @Override
+    public String toString() {
+        String directorInfo = (director != null) ? director.getNombre() : "Sin director (es director)";
+        return "Empleado{" +
+                "id='" + id + '\'' +
+                ", nombre='" + nombre + '\'' +
+                ", cargo='" + cargo + '\'' +
+                ", director=" + directorInfo +
+                '}';
+    }
+```
+[Comprobación 1.](https://github.com/manuelaplanelles/1Daw/edit/main/javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/README.md#comprobamos--la-lista-de-empleados-un-empleado-no-puede-ser-director-y-si-no-es-ning%C3%BAn-de-los-valores-se-guarda-como-pte)
 
 ---
 ### 3.2. Métodos extras implementados
-**a) Constructor modificado de `Invitado`**
-- Modificar el constructor para que llame al set de `fecha_visita` con una fecha que se le pregunta al usuario para guardar cuándo tienen que ir al programa.
-**b) Método `invitadosTemporada(int temporada)`**
-- Muestra cuántos Invitados han acudido al Programa dada una temporada.
-- Muestra también sus nombres y profesiones.
-**c) Método `int vecesInvitado(String nombre)`**
-- Devuelve las veces que ha ido un Invitado al Programa.
-**d) Método `rastrearInvitado(String nombre)`**
-- Hace uso del método del apartado anterior.
-- Imprime las veces que ha ido un Invitado al Programa.
-- Muestra también en qué fechas y temporadas.
-**e) Método `boolean buscarInvitado(String nombre)`**
-- Dado un Invitado, busca si ha acudido a un Programa.
-**f) Método `invitadoAntes(String nombre)`**
-- Usa el método implementado en el apartado anterior.
-- En caso de haber devuelto true buscando en dos Programas distintos, muestra en cuál ha estado antes (comparando fechas).
+
 
 ---
 
@@ -89,7 +133,8 @@ Creamos las clases que se solicitan con sus atributos
 ---
 ## 5. Ejemplo de funcionamiento
 
-El documento proporciona el siguiente ejemplo de ejecución:
+##### Comprobamos  la lista de empleados, un empleado no puede ser director, y si no es ningún de los valores se guarda como pte
+  ![Banner](javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/img_doc/clases y atributos.jpg)
 
 ```java
 public static void main (String[] args){
@@ -122,6 +167,7 @@ Pruebas unitarias de los método implementados con JUnit5.
 8. Diagrama UML:** Crear el diagrama UML con PlantUML.
 
 ---
+
 
 
 
