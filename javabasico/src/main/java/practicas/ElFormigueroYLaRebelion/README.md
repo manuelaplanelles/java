@@ -8,7 +8,7 @@ Manuela Planelles - 1º DAW - IES Mutxamel
 
 ## Índice
 
-1. [Introducción](#1-introducción)
+1. [Introducción]([#1-introducción](https://github.com/manuelaplanelles/1Daw/blob/main/javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/README.md#1-introducci%C3%B3n))
 2. [Objetivos de la práctica](#2-objetivos-de-la-práctica)
 3. [Diseño e Implementación del programa.](#3-diseño-e-implementación)
    - [3.1. Estructura de clases](#31-estructura-de-clases)
@@ -252,6 +252,7 @@ Pruebas unitarias de los método implementados con JUnit5.
 ## 8. Diagrama UML:** Crear el diagrama UML con PlantUML.
 
 ---
+
 
 
 
