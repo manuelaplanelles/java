@@ -11,24 +11,20 @@ Manuela Planelles - 1º DAW - IES Mutxamel
 1. [Introducción](https://github.com/manuelaplanelles/1Daw/blob/main/javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/README.md#1-introducci%C3%B3n)
 2. [Objetivos de la práctica](https://github.com/manuelaplanelles/1Daw/blob/main/javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/README.md#2-objetivos-de-la-pr%C3%A1ctica)
 3. [Diseño e Implementación del programa.](https://github.com/manuelaplanelles/1Daw/blob/main/javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/README.md#3-dise%C3%B1o-e-implementaci%C3%B3n-del-programa)
-   - [3.1. Estructura de clases](#31-estructura-de-clases)
-     - [3.1.1. Clase `AppProgramas`](#311-clase-appprogramas)
-     - [3.1.4. Clase `Empleado`](#314-clase-empleado)
-     - [3.1.5. Clase `Invitado`](#315-clase-invitado)
-     - [3.1.2. Clase `Cadena`](#312-clase-cadena)
-     - [3.1.3. Clase `Programa`](#313-clase-programa)
-   - [3.2. Métodos requeridos](#33-métodos-requeridos)
-4. [Ejemplo de funcionamiento](#5-ejemplo-de-funcionamiento)
-5. [Relaciones entre clases](#32-relaciones-entre-clases)
-6. [Plan de pruebas](#4-plan-de-pruebas)
-- [6.1. Estructura de clases](#31-estructura-de-clases)
-- [6.2. Estructura de clases](#31-estructura-de-clases)
-
-6. [Entrega](#6-entrega)
-   - [6.1. Pruebas final feliz.]()
-   - [6.2. Pruebas con JUnit5.]()
-7. [Documentación Javadoc]()
-8. [Diagrama UML:** Crear el diagrama UML con PlantUML.]
+   - [3.1. Estructura de clases](https://github.com/manuelaplanelles/1Daw/blob/main/javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/README.md#31-estructura-de-clases)
+     - [3.1.1. Clase `AppProgramas`]()
+     - [3.1.4. Clase `Empleado`]()
+     - [3.1.5. Clase `Invitado`]()
+     - [3.1.2. Clase `Cadena`]()
+     - [3.1.3. Clase `Programa`]()
+   - [3.2. Métodos requeridos](https://github.com/manuelaplanelles/1Daw/blob/main/javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/README.md#32-m%C3%A9todos-extras-implementados)
+4. [Relaciones entre clases](https://github.com/manuelaplanelles/1Daw/blob/main/javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/README.md#4-relaciones-entre-clases)
+5. [Ejemplo de funcionamiento](https://github.com/manuelaplanelles/1Daw/blob/main/javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/README.md#5-ejemplo-de-funcionamiento)
+6. [Plan de pruebas](https://github.com/manuelaplanelles/1Daw/blob/main/javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/README.md#6-plan-de-pruebas)
+   - [6.1. Pruebas final feliz.](https://github.com/manuelaplanelles/1Daw/blob/main/javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/README.md#61-pruebas-final-feliz)
+   - [6.2. Pruebas con JUnit5.](https://github.com/manuelaplanelles/1Daw/blob/main/javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/README.md#62-pruebas-con-junit5)
+7. [Documentación Javadoc](https://github.com/manuelaplanelles/1Daw/blob/main/javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/README.md#7-documentaci%C3%B3n-javadoc)
+8. [Diagrama UML:** Crear el diagrama UML con PlantUML.](https://github.com/manuelaplanelles/1Daw/blob/main/javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/README.md#8-diagrama-uml-crear-el-diagrama-uml-con-plantuml)
 
 ---
 
@@ -252,6 +248,7 @@ Pruebas unitarias de los método implementados con JUnit5.
 ## 8. Diagrama UML:** Crear el diagrama UML con PlantUML.
 
 ---
+
 
 
 
