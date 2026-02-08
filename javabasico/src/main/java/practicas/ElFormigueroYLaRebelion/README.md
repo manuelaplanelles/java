@@ -56,7 +56,7 @@ La práctica persigue los siguientes objetivos:
 
 Creamos las clases que se solicitan con sus atributos.
 
-![clases y atributos](/javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/img_doc/clases y atributos.jpg)
+![Clases y atributos](./img_doc/clases%20y%20atributos.jpg)
 
 Creamos los constructores, getters, setters y metodos:
 **Clase Empleado**
@@ -230,7 +230,7 @@ public class Empleado {
 ## 5. Ejemplo de funcionamiento
 
 ##### Comprobamos  la lista de empleados, un empleado no puede ser director, y si no es ningún de los valores se guarda como pte
-  ![Banner](javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/img_doc/clases y atributos.jpg)
+  ![Clases y atributos](./img_doc/clases_y_atributos.jpg)
 
 
 ---
@@ -248,6 +248,7 @@ Pruebas unitarias de los método implementados con JUnit5.
 ## 8. Diagrama UML:** Crear el diagrama UML con PlantUML.
 
 ---
+
 
 
 
