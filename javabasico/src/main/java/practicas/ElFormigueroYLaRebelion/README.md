@@ -10,21 +10,25 @@ Manuela Planelles - 1º DAW - IES Mutxamel
 
 1. [Introducción](#1-introducción)
 2. [Objetivos de la práctica](#2-objetivos-de-la-práctica)
-3. [Diseño e Implementación](#3-diseño-e-implementación)
+3. [Diseño e Implementación del programa.](#3-diseño-e-implementación)
    - [3.1. Estructura de clases](#31-estructura-de-clases)
      - [3.1.1. Clase `AppProgramas`](#311-clase-appprogramas)
-     - [3.1.2. Clase `Cadena`](#312-clase-cadena)
-     - [3.1.3. Clase `Programa`](#313-clase-programa)
      - [3.1.4. Clase `Empleado`](#314-clase-empleado)
      - [3.1.5. Clase `Invitado`](#315-clase-invitado)
-   - [3.2. Relaciones entre clases](#32-relaciones-entre-clases)
-   - [3.3. Métodos requeridos](#33-métodos-requeridos)
-4. [Plan de pruebas](#4-plan-de-pruebas)
-5. [Ejemplo de funcionamiento](#5-ejemplo-de-funcionamiento)
+     - [3.1.2. Clase `Cadena`](#312-clase-cadena)
+     - [3.1.3. Clase `Programa`](#313-clase-programa)
+   - [3.2. Métodos requeridos](#33-métodos-requeridos)
+4. [Ejemplo de funcionamiento](#5-ejemplo-de-funcionamiento)
+5. [Relaciones entre clases](#32-relaciones-entre-clases)
+6. [Plan de pruebas](#4-plan-de-pruebas)
+- [6.1. Estructura de clases](#31-estructura-de-clases)
+- [6.2. Estructura de clases](#31-estructura-de-clases)
+
 6. [Entrega](#6-entrega)
-   - [6.1. Requisitos de entrega](#61-requisitos-de-entrega)
-   - [6.2. Estructura del repositorio](#62-estructura-del-repositorio)
-7. [Conclusiones](#7-conclusiones)
+   - [6.1. Pruebas final feliz.]()
+   - [6.2. Pruebas con JUnit5.]()
+7. [Documentación Javadoc]()
+8. [Diagrama UML:** Crear el diagrama UML con PlantUML.]
 
 ---
 
@@ -56,7 +60,7 @@ La práctica persigue los siguientes objetivos:
 
 Creamos las clases que se solicitan con sus atributos.
 
-![clases y atributos](javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/img_doc/clases y atributos.jpg)
+![clases y atributos](/javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/img_doc/clases y atributos.jpg)
 
 Creamos los constructores, getters, setters y metodos:
 **Clase Empleado**
@@ -115,8 +119,104 @@ private String generarId(){
     }
 ```
 [Comprobación 1.](https://github.com/manuelaplanelles/1Daw/edit/main/javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/README.md#comprobamos--la-lista-de-empleados-un-empleado-no-puede-ser-director-y-si-no-es-ning%C3%BAn-de-los-valores-se-guarda-como-pte)
+<details>
+<summary>Ver el código completo de la clase Empleado</summary>
 
----
+```java
+public class Empleado {
+    private static int contadorId = 1;
+    private String id;
+    private String nombre;
+    private String cargo;
+    private Empleado director;
+
+    private String generarId(){
+        String id = String.format("EP%03d", contadorId);
+        contadorId++;
+        return id;
+    }
+    public Empleado(String nombre, String cargo, Empleado director) {
+        this.id = generarId();
+        this.nombre = nombre;
+        setCargo(cargo);
+
+        if (this.cargo.equals("director")) {
+            this.director = null;
+        } else {
+            this.director = director;
+        }
+    }
+
+
+    public static int getContadorId() {
+        return contadorId;
+    }
+
+    public static void setContadorId(int contadorId) {
+        Empleado.contadorId = contadorId;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getCargo() {
+        return cargo;
+    }
+
+    public void setCargo(String cargo) {
+        String[] cargosValidos = {"director", "técnico", "presentador", "colaborador"};
+        boolean esValido = false;
+
+        for (String cargoValido : cargosValidos) {
+            if (cargoValido.equalsIgnoreCase(cargo)) {
+                esValido = true;
+                break;
+            }
+        }
+        if (esValido) {
+            this.cargo = cargo.toLowerCase();
+        } else {
+            this.cargo = "pte";
+        }
+    }
+
+    public Empleado getDirector() {
+        return director;
+    }
+
+    public void setDirector(Empleado director) {
+        this.director = director;
+    }
+
+    @Override
+    public String toString() {
+        String directorInfo = (director != null) ? director.getNombre() : "Sin director (es director)";
+        return "Empleado{" +
+                "id='" + id + '\'' +
+                ", nombre='" + nombre + '\'' +
+                ", cargo='" + cargo + '\'' +
+                ", director=" + directorInfo +
+                '}';
+    }
+}
+```
+
+</details>
+
+
 ### 3.2. Métodos extras implementados
 
 
@@ -136,22 +236,7 @@ private String generarId(){
 ##### Comprobamos  la lista de empleados, un empleado no puede ser director, y si no es ningún de los valores se guarda como pte
   ![Banner](javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/img_doc/clases y atributos.jpg)
 
-```java
-public static void main (String[] args){
-    // creamos una cadena de tv
-    Cadena antena3 = new Cadena("Antena 3");
-    
-    // creamos un programa
-    Programa el_hormiguero = new Programa("El Hormiguero", antena3, "Director1");
-    
-    // insertamos empleados en el programa
-    el_hormiguero.insertarEmpleado("Pablo Motos", "presentador", null);
-    
-    // ver empleados del programa
-    // insertamos invitados en el programa
-    // ver invitados del programa
-}
-```
+
 ---
 
 ## 6. Plan de pruebas
@@ -164,9 +249,10 @@ Pruebas unitarias de los método implementados con JUnit5.
 ## 7. Documentación Javadoc:
 ** Comentar el código siguiendo el estándar Javadoc.
 ---
-8. Diagrama UML:** Crear el diagrama UML con PlantUML.
+## 8. Diagrama UML:** Crear el diagrama UML con PlantUML.
 
 ---
+
 
 
 
