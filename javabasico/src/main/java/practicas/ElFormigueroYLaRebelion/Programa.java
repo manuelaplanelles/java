@@ -67,6 +67,57 @@ public class Programa {
             cadena.agregarPrograma(this);
         }
     }
+    public void invitadosTemporada(int temporada) {
+        int contador = 0;
+
+        System.out.println("Invitados de la temporada " + temporada );
+
+        for (Invitado invitado : listaInvitado) {
+            if (invitado.getTemporada() == temporada) {
+                contador++;
+                System.out.println("- " + invitado.getNombre() + " (" + invitado.getProfesion() + ")");
+            }
+        }
+
+        System.out.println("Total de invitados en temporada " + temporada + ": " + contador);
+    }
+    public int vecesInvitado(String nombre) {
+        int veces = 0;
+
+        for (Invitado invitado : listaInvitado) {
+            if (invitado.getNombre().equalsIgnoreCase(nombre)) {
+                veces++;
+            }
+        }
+
+        return veces;
+    }
+    public void rastrearInvitado(String nombre) {
+        int veces = vecesInvitado(nombre);
+
+        System.out.println("Rastreo de " + nombre);
+        System.out.println("Ha visitado el programa " + veces + " veces");
+
+        if (veces > 0) {
+            System.out.println("Detalles de las visitas:");
+            for (Invitado invitado : listaInvitado) {
+                if (invitado.getNombre().equalsIgnoreCase(nombre)) {
+                    System.out.println("- Fecha: " + invitado.getFecha_visita() +
+                            ", Temporada: " + invitado.getTemporada());
+                }
+            }
+        } else {
+            System.out.println(nombre + " no ha visitado el programa.");
+        }
+    }
+    public boolean buscarInvitado(String nombre) {
+        for (Invitado invitado : listaInvitado) {
+            if (invitado.getNombre().equalsIgnoreCase(nombre)) {
+                return true;
+            }
+        }
+        return false;
+    }
 
     public int getTemporadas() {
         return temporadas;

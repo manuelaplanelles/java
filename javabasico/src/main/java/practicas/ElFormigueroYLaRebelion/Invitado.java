@@ -1,6 +1,7 @@
 package practicas.ElFormigueroYLaRebelion;
 
 import java.time.LocalDate;
+import java.util.Scanner;
 
 public class Invitado {
     private String nombre;
@@ -12,7 +13,17 @@ public class Invitado {
         this.nombre = nombre;
         this.profesion = profesion;
         this.temporada = temporada;
-        this.fecha_visita = LocalDate.now();
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Introduce la fecha de visita para " + nombre + ":");
+        System.out.print("Año (ej: 2025): ");
+        int año = scanner.nextInt();
+        System.out.print("Mes (1-12): ");
+        int mes = scanner.nextInt();
+        System.out.print("Día (1-31): ");
+        int dia = scanner.nextInt();
+
+        setFecha_visita(LocalDate.of(año, mes, dia));
     }
 
 
