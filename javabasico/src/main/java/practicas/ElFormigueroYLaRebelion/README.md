@@ -24,8 +24,9 @@ Manuela Planelles - 1º DAW - IES Mutxamel
    - [6.1. Pruebas final feliz.](https://github.com/manuelaplanelles/1Daw/blob/main/javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/README.md#61-pruebas-final-feliz)
    - [6.2. Pruebas con JUnit5.](https://github.com/manuelaplanelles/1Daw/blob/main/javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/README.md#62-pruebas-con-junit5)
 7. [Documentación Javadoc](https://github.com/manuelaplanelles/1Daw/blob/main/javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/README.md#7-documentaci%C3%B3n-javadoc)
-8. [Diagrama UML.](https://github.com/manuelaplanelles/1Daw/blob/main/javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/README.md#8-diagrama-uml-crear-el-diagrama-uml-con-plantuml)
-9. Conclusión.
+8. [Diagrama UML.](https://github.com/manuelaplanelles/1Daw/blob/main/javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/README.md#8-diagrama-uml)
+9. [Conclusión.](https://github.com/manuelaplanelles/1Daw/blob/main/javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/README.md#9-conclusi%C3%B3n)
+    
 
 ---
 
@@ -1026,9 +1027,12 @@ InvitadoTest
 
 
 ---
+
 ## 8. Diagrama UML:
 - Solicitamos a ChartGPT que nos cree un codigo de un diagrama de relación entre varias clases parea PlantUML.
-  ![Diagrama](./img_doc/diagrama_clases.png)
+
+    ![Diagrama](./img_doc/diagrama_clases.png)
+
   
 <details>
 <summary>Ver el código para PlantUML</summary>
@@ -1218,6 +1222,7 @@ title Diagrama de Clases - El Formiguero y La Rebelión\n@author Manuela Planell
 ```
 
 </details>
+
 ---
 
 ## 9. Conclusión.
@@ -1235,6 +1240,7 @@ Esta practica me ayudado a comprender mas la estructura de objeta y la relacion,
 Y sí, las IAs pueden ayudar mucho en el camino, pero solo si sabemos qué preguntar y cómo aplicar las respuestas, y la intención que tengas con ella. Al final, el código lo escribo, y la responsabilidad de entenderlo es mia.
 
 ---
+
 
 
 
