@@ -231,7 +231,7 @@ public class Empleado {
 - La única condición es que la la fecha por defecto (LocalDate) y se crean los atriburos, el constructor, los set, los get y toString.
 
 <details>
-<summary>Ver el código completo de la clase Empleado</summary>
+<summary>Ver el código completo de la clase Invitado</summary>
 
 ```java
 import java.time.LocalDate;
@@ -330,7 +330,7 @@ public class Invitado {
     }
 ```
 <details>
-<summary>Ver el código completo de la clase Empleado</summary>
+<summary>Ver el código completo de la clase Cadena</summary>
 
 ```java
 import java.util.ArrayList;
@@ -468,7 +468,7 @@ Desde el método setCadena, generamos función if para eliminar la cadena anteri
     }
 ```
 <details>
-<summary>Ver el código completo de la clase Empleado</summary>
+<summary>Ver el código completo de la clase Programa</summary>
 
 ```java
 package practicas.ElFormigueroYLaRebelion;
@@ -592,8 +592,40 @@ public class Programa {
  [Comprobación 4.](https://github.com/manuelaplanelles/1Daw/blob/main/javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/README.md#comprobamos-sobre-la-clase-programa-la-gestion-de-los-empleados)
 
  ---
-### 3.2. Métodos extras implementados
+### 3.2. Métodos extras implementados.
+- Sobre:
+> _ a) Modifica el constructor de Invitados para que llame al set de fecha_visita con una fecha que le vamos a preguntar al usuario para guardar cuándo tienen que ir al Programa._
+Implementamos en el constructor, y tambien pedimos fecha al usuario y llamamos al set de fecha_vista para asignar la fecha
+```java
+import java.time.LocalDate;
+import java.util.Scanner;
+public class Invitado {
+    private String nombre;
+    private String profesion;
+    private LocalDate fecha_visita;
+    private int temporada;
 
+    public Invitado(String nombre, String profesion, int temporada) {
+        this.nombre = nombre;
+        this.profesion = profesion;
+        this.temporada = temporada;
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Introduce la fecha de visita para " + nombre + ":");
+        System.out.print("Año (ej: 2025): ");
+        int año = scanner.nextInt();
+        System.out.print("Mes (1-12): ");
+        int mes = scanner.nextInt();
+        System.out.print("Día (1-31): ");
+        int dia = scanner.nextInt();
+        
+        setFecha_visita(LocalDate.of(año, mes, dia)); //.of para crear los valores y setFecha para asignar la fecha
+    }
+    
+    // ... resto del código igual ...
+}
+
+```
 
 ---
 
@@ -637,6 +669,7 @@ public class Programa {
 - Crear el diagrama UML con PlantUML.
 
 ---
+
 
 
 
