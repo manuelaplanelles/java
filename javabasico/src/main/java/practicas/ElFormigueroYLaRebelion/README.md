@@ -634,7 +634,7 @@ Recorre la lista de invitados, si la temporada coincide, incrementa el contador 
 public void invitadosTemporada(int temporada) {
     int contador = 0;
     
-    System.out.println("=== Invitados de la temporada " + temporada + " ===");
+    System.out.println("Invitados de la temporada " + temporada );
     
     for (Invitado invitado : listaInvitado) {
         if (invitado.getTemporada() == temporada) {
@@ -669,7 +669,7 @@ Llama a 'vecesInvitado(nombre)' para obtener el total, recorre la lista y muestr
 public void rastrearInvitado(String nombre) {
     int veces = vecesInvitado(nombre);
     
-    System.out.println("=== Rastreo de " + nombre + " ===");
+    System.out.println("Rastreo de " + nombre);
     System.out.println("Ha visitado el programa " + veces + " veces");
     
     if (veces > 0) {
@@ -733,12 +733,34 @@ if (fecha1.isBefore(fecha2)) {
   ![Prueba Programa](./img_doc/pruebas_programa.jpg)
 
 
-
 ---
 
 ## 6. Plan de pruebas
 ### 6.1. Pruebas final feliz.
-- Realiza las pruebas manuales necesarias para comprobar que el programa funciona bien.
+- Realiza las pruebas manuales necesarias para comprobar la Salida esperada.
+```java
+public class AppProgramas {
+    public static void main(String[] args) {
+        Cadena antena3 = new Cadena("Antena 3");
+        System.out.println(antena3);
+
+        Programa el_hormiguero = new Programa("El Hormiguero", antena3, "Director1");
+        System.out.println(el_hormiguero);
+        System.out.println(antena3);
+
+        el_hormiguero.añadirEmpleado("Pablo Motos", "presentador", null);
+        System.out.println(el_hormiguero);
+
+        System.out.println(el_hormiguero.getListaEmpleado());
+
+        el_hormiguero.añadirInvitado("Aitana", "cantante", 1);
+
+        System.out.println(el_hormiguero.getListaInvitado());
+    }
+}
+```
+![Salida esperada](./img_doc/pruebas_programa.jpg)
+
 ---
 ### 6.2. Pruebas con JUnit5.
 - Pruebas unitarias de los método implementados con JUnit5.
@@ -750,46 +772,3 @@ if (fecha1.isBefore(fecha2)) {
 - Crear el diagrama UML con PlantUML.
 
 ---
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
