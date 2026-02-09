@@ -126,10 +126,6 @@ private String generarId(){
     }
 ```
 
-[Comprobación 1.](https://github.com/manuelaplanelles/1Daw/blob/main/javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/README.md#comprobamos--la-lista-de-empleados-un-empleado-no-puede-ser-director-y-si-no-es-ning%C3%BAn-de-los-valores-se-guarda-como-pte)
-
-
-
 <details>
 <summary>Ver el código completo de la clase Empleado</summary>
 
@@ -227,6 +223,83 @@ public class Empleado {
 
 </details>
 
+[Comprobación 1.](https://github.com/manuelaplanelles/1Daw/blob/main/javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/README.md#comprobamos--la-lista-de-empleados-un-empleado-no-puede-ser-director-y-si-no-es-ning%C3%BAn-de-los-valores-se-guarda-como-pte)
+
+---
+
+#### Clase Invitado
+- La única condición es que la la fecha por defecto (LocalDate) y se crean los atriburos, el constructor, los set, los get y toString.
+
+<details>
+<summary>Ver el código completo de la clase Empleado</summary>
+
+```java
+import java.time.LocalDate;
+
+public class Invitado {
+    private String nombre;
+    private String profesion;
+    private LocalDate fecha_visita;
+    private int temporada;
+
+    public Invitado (String nombre, String profesion, int temporada){
+        this.nombre = nombre;
+        this.profesion = profesion;
+        this.temporada = temporada;
+        this.fecha_visita = LocalDate.now();
+    }
+
+
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getProfesion() {
+        return profesion;
+    }
+
+    public void setProfesion(String profesion) {
+        this.profesion = profesion;
+    }
+
+    public LocalDate getFecha_visita() {
+        return fecha_visita;
+    }
+
+    public void setFecha_visita(LocalDate fecha_visita) {
+        this.fecha_visita = fecha_visita;
+    }
+
+    public int getTemporada() {
+        return temporada;
+    }
+
+    public void setTemporada(int temporada) {
+        this.temporada = temporada;
+    }
+
+    @Override
+    public String toString() {
+        return "Invitado{" +
+                "nombre='" + nombre + '\'' +
+                ", profesion='" + profesion + '\'' +
+                ", fecha_visita=" + fecha_visita +
+                ", temporada=" + temporada +
+                '}';
+    }
+}
+
+```
+</details>
+
+ [Comprobación 2.]()
+ 
+---
 
 ### 3.2. Métodos extras implementados
 
@@ -264,6 +337,7 @@ Comentar el código siguiendo el estándar Javadoc.
 Crear el diagrama UML con PlantUML.
 
 ---
+
 
 
 
