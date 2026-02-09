@@ -608,15 +608,15 @@ public class Programa {
 ---
 ## 5. Ejemplo de funcionamiento
 
-##### Comprobamos la lista de empleados, un empleado no puede ser director, y si no es ningún de los valores se guarda como pte
+##### 1. Comprobamos la lista de empleados, un empleado no puede ser director, y si no es ningún de los valores se guarda como pte
   ![Prueba Empleado](./img_doc/pruebas_empleado.jpg)
-##### Comprobamos que se crea sin problema Invitado
+##### 2. Comprobamos que se crea sin problema Invitado
   ![Prueba Invitado](./img_doc/prueba_invitado.png)
 
-##### Comprobamos sobre la clase Cadena
+##### 3. Comprobamos sobre la clase Cadena
   ![Prueba Cadena](./img_doc/pruebas_cadena.jpg)
 
-##### Comprobamos sobre la clase Programa, la gestion de los empleados
+##### 4. Comprobamos sobre la clase Programa, la gestion de los empleados
   ![Prueba Programa](./img_doc/pruebas_programa.jpg)
 
 
@@ -625,18 +625,19 @@ public class Programa {
 
 ## 6. Plan de pruebas
 ### 6.1. Pruebas final feliz.
-Realiza las pruebas manuales necesarias para comprobar que el programa funciona bien.
+- Realiza las pruebas manuales necesarias para comprobar que el programa funciona bien.
 ---
 ### 6.2. Pruebas con JUnit5.
-Pruebas unitarias de los método implementados con JUnit5.
+- Pruebas unitarias de los método implementados con JUnit5.
 ---
 ## 7. Documentación Javadoc:
-Comentar el código siguiendo el estándar Javadoc.
+- Comentar el código siguiendo el estándar Javadoc.
 ---
 ## 8. Diagrama UML:
-Crear el diagrama UML con PlantUML.
+- Crear el diagrama UML con PlantUML.
 
 ---
+
 
 
 
