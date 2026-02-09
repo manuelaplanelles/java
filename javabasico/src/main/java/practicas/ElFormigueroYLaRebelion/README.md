@@ -629,13 +629,19 @@ public class Invitado {
 ```
 > _b) Método invitadosTemporada(int temporada) que muestre cuántos Invitados han acudido al Programa dada una temporada. Muestra también sus nombres y profesiones._
 >
+
 > _c) Método int vecesInvitado(String nombre) que devuelva las veces que ha ido un Invitado al Programa._
 >
+
 > _d) Método rastrearInvitado(String nombre) que haga uso del método creado en el apartado anterior e imprima las veces que ha ido un Invitado al Programa, además de mostrar también en qué fechas y temporadas._
 >
+
 > _e) Método boolean buscarInvitado(String nombre) para que dado un Invitado sea capaz de buscar si ha acudido a un Programa._
 >
+
 > _f) Método invitadoAntes(String nombre) que use el método implementado en el apartado anterior para que en caso de haber devuelto true buscando en dos Programas distintos, muestre en cuál ha estado antes._
+>
+
 ---
 
 ## 4. Relaciones entre clases
@@ -678,6 +684,7 @@ public class Invitado {
 - Crear el diagrama UML con PlantUML.
 
 ---
+
 
 
 
