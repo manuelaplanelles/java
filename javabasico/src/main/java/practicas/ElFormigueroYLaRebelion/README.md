@@ -1019,13 +1019,17 @@ InvitadoTest
 | `@see` | Referencias cruzadas a otros métodos/clases | Donde sea relevante |
 | `@Override` | Indica sobrescritura de método | Métodos toString() |
 
+- Se adjunta en la misma carpeta del proyecto los zip la documentacion de JavaDoc.
+   
 ![JavaDoc](./img_doc/JavaDoc.jpg)
+
 
 ---
 ## 8. Diagrama UML:
 - Crear el diagrama UML con PlantUML.
 
 ---
+
 
 
 
