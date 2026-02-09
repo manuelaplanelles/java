@@ -759,7 +759,7 @@ public class AppProgramas {
     }
 }
 ```
-![Salida esperada](./img_doc/pruebas_programa.jpg)
+![Salida esperada](./img_doc/salida.jpg)
 
 ---
 ### 6.2. Pruebas con JUnit5.
@@ -772,3 +772,4 @@ public class AppProgramas {
 - Crear el diagrama UML con PlantUML.
 
 ---
+
