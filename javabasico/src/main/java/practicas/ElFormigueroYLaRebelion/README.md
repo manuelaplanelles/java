@@ -764,9 +764,9 @@ public class AppProgramas {
 ---
 ### 6.2. Pruebas con JUnit5.
 - Pruebas unitarias de los método implementados con JUnit5, por cada clase:
-** CadenaTest
+CadenaTest
 <details>
-<summary>Ver el código completo de la clase Empleado</summary>
+<summary>Ver el código completo de CadenaTest</summary>
 
 ```java
 package practicas.ElFormigueroYLaRebelion;
@@ -823,12 +823,11 @@ class CadenaTest {
 }
 ```
 </details>
+![Resultado](./img_doc/cadenaTest.jpg)
 
-![Resultado](./img_doc/)
-
-** ProgramaTest
+ProgramaTest
 <details>
-<summary>Ver el código completo de la clase Empleado</summary>
+<summary>Ver el código completo de ProgramaTest</summary>
 
 ```java
 package practicas.ElFormigueroYLaRebelion;
@@ -920,11 +919,11 @@ class ProgramaTest {
 ```
 </details>
 
-![Resultado](./img_doc/)
+![Resultado](./img_doc/programaTest.jpg)
 
-** EmpleadoTest
+EmpleadoTest
 <details>
-<summary>Ver el código completo de la clase Empleado</summary>
+<summary>Ver el código completo de EmpleadoTest</summary>
 
 ```java
 package practicas.ElFormigueroYLaRebelion;
@@ -1000,9 +999,9 @@ class EmpleadoTest {
 ```
 </details>
 
-![Resultado](./img_doc/)
+![Resultado](./img_doc/empleadoTest.jpg)
 
-** InvitadoTest
+InvitadoTest
 - El constructor de Invitado pide datos por consola con Scanner, lo cual NO SE PUEDE TESTEAR en JUnit.
 
 ---
@@ -1013,5 +1012,6 @@ class EmpleadoTest {
 - Crear el diagrama UML con PlantUML.
 
 ---
+
 
 
