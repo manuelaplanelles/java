@@ -17,7 +17,7 @@ Manuela Planelles - 1º DAW - IES Mutxamel
      - [3.1.5. Clase `Invitado`](https://github.com/manuelaplanelles/1Daw/blob/main/javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/README.md#clase-invitado)
      - [3.1.2. Clase `Cadena`](https://github.com/manuelaplanelles/1Daw/blob/main/javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/README.md#clase-cadena)
      - [3.1.3. Clase `Programa`](https://github.com/manuelaplanelles/1Daw/blob/main/javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/README.md#clase-programa)
-   - [3.2. Métodos requeridos](https://github.com/manuelaplanelles/1Daw/blob/main/javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/README.md#32-m%C3%A9todos-extras-implementados)
+   - [3.2. Métodos extras implementados.](https://github.com/manuelaplanelles/1Daw/blob/main/javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/README.md#32-m%C3%A9todos-extras-implementados)
 4. [Relaciones entre clases](https://github.com/manuelaplanelles/1Daw/blob/main/javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/README.md#4-relaciones-entre-clases)
 5. [Ejemplo de funcionamiento](https://github.com/manuelaplanelles/1Daw/blob/main/javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/README.md#5-ejemplo-de-funcionamiento)
 6. [Plan de pruebas](https://github.com/manuelaplanelles/1Daw/blob/main/javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/README.md#6-plan-de-pruebas)
@@ -670,6 +670,7 @@ public class Invitado {
 - Crear el diagrama UML con PlantUML.
 
 ---
+
 
 
 
