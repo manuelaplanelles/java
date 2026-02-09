@@ -24,7 +24,9 @@ Manuela Planelles - 1º DAW - IES Mutxamel
    - [6.1. Pruebas final feliz.](https://github.com/manuelaplanelles/1Daw/blob/main/javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/README.md#61-pruebas-final-feliz)
    - [6.2. Pruebas con JUnit5.](https://github.com/manuelaplanelles/1Daw/blob/main/javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/README.md#62-pruebas-con-junit5)
 7. [Documentación Javadoc](https://github.com/manuelaplanelles/1Daw/blob/main/javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/README.md#7-documentaci%C3%B3n-javadoc)
-8. [Diagrama UML:** Crear el diagrama UML con PlantUML.](https://github.com/manuelaplanelles/1Daw/blob/main/javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/README.md#8-diagrama-uml-crear-el-diagrama-uml-con-plantuml)
+8. [Diagrama UML.](https://github.com/manuelaplanelles/1Daw/blob/main/javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/README.md#8-diagrama-uml)
+9. [Conclusión.](https://github.com/manuelaplanelles/1Daw/blob/main/javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/README.md#9-conclusi%C3%B3n)
+    
 
 ---
 
@@ -763,13 +765,487 @@ public class AppProgramas {
 
 ---
 ### 6.2. Pruebas con JUnit5.
-- Pruebas unitarias de los método implementados con JUnit5.
----
-## 7. Documentación Javadoc:
-- Comentar el código siguiendo el estándar Javadoc.
----
-## 8. Diagrama UML:
-- Crear el diagrama UML con PlantUML.
+- Pruebas unitarias de los método implementados con JUnit5, por cada clase:
+CadenaTest
+<details>
+<summary>Ver el código completo de CadenaTest</summary>
+
+```java
+package practicas.ElFormigueroYLaRebelion;
+
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+
+class CadenaTest {
+
+    @Test
+    void agregarPrograma() {
+        Cadena cadena = new Cadena("Antena 3");
+        Programa prog = new Programa("El Hormiguero", null, "Director1");
+        
+        cadena.agregarPrograma(prog);
+        
+        assertEquals(1, cadena.getListaPrograma().size());
+    }
+
+    @Test
+    void eliminarPrograma() {
+        Cadena cadena = new Cadena("Antena 3");
+        Programa prog = new Programa("El Hormiguero", null, "Director1");
+        cadena.agregarPrograma(prog);
+        
+        cadena.eliminarPrograma(prog);
+        
+        assertEquals(0, cadena.getListaPrograma().size());
+    }
+
+    @Test
+    void getNombre() {
+        Cadena cadena = new Cadena("Antena 3");
+        
+        assertEquals("Antena 3", cadena.getNombre());
+    }
+
+    @Test
+    void setNombre() {
+        Cadena cadena = new Cadena("Antena 3");
+        
+        cadena.setNombre("Telecinco");
+        
+        assertEquals("Telecinco", cadena.getNombre());
+    }
+
+    @Test
+    void getListaPrograma() {
+        Cadena cadena = new Cadena("Antena 3");
+        
+        assertNotNull(cadena.getListaPrograma());
+        assertEquals(0, cadena.getListaPrograma().size());
+    }
+}
+```
+</details>
+
+![Resultado](./img_doc/cadenaTest.jpg)
+
+
+ProgramaTest
+<details>
+<summary>Ver el código completo de ProgramaTest</summary>
+
+```java
+package practicas.ElFormigueroYLaRebelion;
+
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+
+class ProgramaTest {
+
+    @Test
+    void insertarEmpleado() {
+        Programa prog = new Programa("El Hormiguero", null, "Director1");
+        
+        prog.insertarEmpleado("Pablo Motos", "presentador", null);
+        
+        assertEquals(2, prog.getListaEmpleado().size());
+    }
+
+    @Test
+    void eliminarEmpleado() {
+        Programa prog = new Programa("El Hormiguero", null, "Director1");
+        Empleado emp = prog.getListaEmpleado().get(0);
+        
+        prog.eliminarEmpleado(emp);
+        
+        assertEquals(0, prog.getListaEmpleado().size());
+    }
+
+    @Test
+    void vecesInvitado() {
+        Programa prog = new Programa("El Hormiguero", null, "Director1");
+        // Nota: Este test no funciona porque insertarInvitado pide datos por consola
+        // Se puede probar manualmente
+        
+        int veces = prog.vecesInvitado("Aitana");
+        
+        assertEquals(0, veces);
+    }
+
+    @Test
+    void buscarInvitado() {
+        Programa prog = new Programa("El Hormiguero", null, "Director1");
+        
+        boolean encontrado = prog.buscarInvitado("Aitana");
+        
+        assertFalse(encontrado);
+    }
+
+    @Test
+    void getNombre() {
+        Programa prog = new Programa("El Hormiguero", null, "Director1");
+        
+        assertEquals("El Hormiguero", prog.getNombre());
+    }
+
+    @Test
+    void setNombre() {
+        Programa prog = new Programa("El Hormiguero", null, "Director1");
+        
+        prog.setNombre("La Rebelión");
+        
+        assertEquals("La Rebelión", prog.getNombre());
+    }
+
+    @Test
+    void getTemporadas() {
+        Programa prog = new Programa("El Hormiguero", null, "Director1");
+        
+        assertEquals(0, prog.getTemporadas());
+    }
+
+    @Test
+    void setTemporadas() {
+        Programa prog = new Programa("El Hormiguero", null, "Director1");
+        
+        prog.setTemporadas(5);
+        
+        assertEquals(5, prog.getTemporadas());
+    }
+
+    @Test
+    void getDirector() {
+        Programa prog = new Programa("El Hormiguero", null, "Director1");
+        
+        assertNotNull(prog.getDirector());
+        assertEquals("Director1", prog.getDirector().getNombre());
+    }
+}
+```
+</details>
+
+![Resultado](./img_doc/programaTest.jpg)
+
+EmpleadoTest
+<details>
+<summary>Ver el código completo de EmpleadoTest</summary>
+
+```java
+package practicas.ElFormigueroYLaRebelion;
+
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
+class EmpleadoTest {
+
+    @Test
+    void getId() {
+        Empleado emp = new Empleado("Juan", "técnico", null);
+        
+        assertNotNull(emp.getId());
+        assertTrue(emp.getId().startsWith("EP"));
+    }
+
+    @Test
+    void getNombre() {
+        Empleado emp = new Empleado("Juan", "técnico", null);
+        
+        assertEquals("Juan", emp.getNombre());
+    }
+
+    @Test
+    void setNombre() {
+        Empleado emp = new Empleado("Juan", "técnico", null);
+        
+        emp.setNombre("Pedro");
+        
+        assertEquals("Pedro", emp.getNombre());
+    }
+
+    @Test
+    void getCargo() {
+        Empleado emp = new Empleado("Juan", "técnico", null);
+        
+        assertEquals("técnico", emp.getCargo());
+    }
+
+    @Test
+    void setCargo() {
+        Empleado emp = new Empleado("Juan", "técnico", null);
+        
+        emp.setCargo("presentador");
+        
+        assertEquals("presentador", emp.getCargo());
+    }
+
+    @Test
+    void setCargoInvalido() {
+        Empleado emp = new Empleado("Juan", "actor", null);
+        
+        assertEquals("pte", emp.getCargo());
+    }
+
+    @Test
+    void getDirector() {
+        Empleado director = new Empleado("Director1", "director", null);
+        Empleado emp = new Empleado("Juan", "técnico", director);
+        
+        assertNotNull(emp.getDirector());
+        assertEquals("Director1", emp.getDirector().getNombre());
+    }
+
+    @Test
+    void directorSinDirector() {
+        Empleado director = new Empleado("Director1", "director", null);
+        
+        assertNull(director.getDirector());
+    }
+}
+```
+</details>
+
+![Resultado](./img_doc/empleadoTest.jpg)
+
+InvitadoTest
+- El constructor de Invitado pide datos por consola con Scanner, lo cual NO SE PUEDE TESTEAR en JUnit.
 
 ---
+## 7. Documentación Javadoc:
+- Se comentan las 4 clases tanto en la cabecera como en los metodos usando las etiquetas:
+
+| Etiqueta | Uso | Ubicación |
+|----------|------|-------------|
+| `@author` | Nombre del autor | Clases |
+| `@version` | Versión del código | Clases |
+| `@param` | Descripción de parámetros | Constructores y métodos con parámetros |
+| `@return` | Descripción del valor devuelto | Métodos que no son void. |
+| `@see` | Referencias cruzadas a otros métodos/clases | Donde sea relevante |
+| `@Override` | Indica sobrescritura de método | Métodos toString() |
+
+- Se adjunta en la misma carpeta del proyecto los zip la documentacion de JavaDoc.
+   
+![JavaDoc](./img_doc/JavaDoc.jpg)
+
+
+---
+
+## 8. Diagrama UML:
+- Solicitamos a ChartGPT que nos cree un codigo de un diagrama de relación entre varias clases parea PlantUML.
+
+    ![Diagrama](./img_doc/diagrama_clases.png)
+
+  
+<details>
+<summary>Ver el código para PlantUML</summary>
+
+```java
+@startuml
+
+!define RECTANGLE class
+
+skinparam backgroundColor #FEFEFE
+skinparam classAttributeIconSize 0
+
+' Colores personalizados para cada clase
+skinparam class {
+    BackgroundColor<<Cadena>> #E3F2FD
+    BorderColor<<Cadena>> #1976D2
+    
+    BackgroundColor<<Programa>> #F3E5F5
+    BorderColor<<Programa>> #7B1FA2
+    
+    BackgroundColor<<Empleado>> #E8F5E9
+    BorderColor<<Empleado>> #388E3C
+    
+    BackgroundColor<<Invitado>> #FFF3E0
+    BorderColor<<Invitado>> #F57C00
+}
+
+' Clase Cadena
+class Cadena <<Cadena>> {
+    - nombre: String
+    - listaPrograma: ArrayList<Programa>
+    
+    + Cadena(nombre: String)
+    + agregarPrograma(programa: Programa): void
+    + eliminarPrograma(programa: Programa): void
+    + getNombre(): String
+    + setNombre(nombre: String): void
+    + getListaPrograma(): ArrayList<Programa>
+    + setListaPrograma(listaPrograma: ArrayList<Programa>): void
+    + toString(): String
+}
+
+' Clase Programa
+class Programa <<Programa>> {
+    - nombre: String
+    - cadena: Cadena
+    - temporadas: int
+    - listaEmpleado: ArrayList<Empleado>
+    - listaInvitado: ArrayList<Invitado>
+    - director: Empleado
+    
+    + Programa(nombre: String, cadena: Cadena, nombreDirector: String)
+    + añadirEmpleado(nombre: String, cargo: String, director: Empleado): void
+    + eliminarEmpleado(empleado: Empleado): void
+    + añadirInvitado(nombre: String, profesion: String, temporada: int): void
+    + eliminarInvitado(invitado: Invitado): void
+    + getNombre(): String
+    + setNombre(nombre: String): void
+    + getCadena(): Cadena
+    + setCadena(cadena: Cadena): void
+    + invitadosTemporada(temporada: int): void
+    + vecesInvitado(nombre: String): int
+    + rastrearInvitado(nombre: String): void
+    + buscarInvitado(nombre: String): boolean
+    + getTemporadas(): int
+    + setTemporadas(temporadas: int): void
+    + getListaEmpleado(): ArrayList<Empleado>
+    + setListaEmpleado(listaEmpleado: ArrayList<Empleado>): void
+    + getListaInvitado(): ArrayList<Invitado>
+    + setListaInvitado(listaInvitado: ArrayList<Invitado>): void
+    + getDirector(): Empleado
+    + setDirector(director: Empleado): void
+    + toString(): String
+}
+
+' Clase Empleado
+class Empleado <<Empleado>> {
+    - {static} contadorId: int
+    - id: String
+    - nombre: String
+    - cargo: String
+    - director: Empleado
+    
+    - generarId(): String
+    + Empleado(nombre: String, cargo: String, director: Empleado)
+    + {static} getContadorId(): int
+    + {static} setContadorId(contadorId: int): void
+    + getId(): String
+    + setId(id: String): void
+    + getNombre(): String
+    + setNombre(nombre: String): void
+    + getCargo(): String
+    + setCargo(cargo: String): void
+    + getDirector(): Empleado
+    + setDirector(director: Empleado): void
+    + toString(): String
+}
+
+' Clase Invitado
+class Invitado <<Invitado>> {
+    - nombre: String
+    - profesion: String
+    - fecha_visita: LocalDate
+    - temporada: int
+    
+    + Invitado(nombre: String, profesion: String, temporada: int)
+    + getNombre(): String
+    + setNombre(nombre: String): void
+    + getProfesion(): String
+    + setProfesion(profesion: String): void
+    + getFecha_visita(): LocalDate
+    + setFecha_visita(fecha_visita: LocalDate): void
+    + getTemporada(): int
+    + setTemporada(temporada: int): void
+    + toString(): String
+}
+
+' Relaciones
+
+' Cadena <-> Programa: Asociación/Agregación bidireccional
+Cadena "1" o-- "0..*" Programa : agregación\nbidireccional >
+Programa --> Cadena
+
+' Programa <-> Empleado: Composición (el director se crea en Programa)
+Programa *-- "1..*" Empleado : composición >
+note on link
+  El director se crea 
+  automáticamente en 
+  el constructor de 
+  Programa
+end note
+
+' Programa <-> Invitado: Composición
+Programa *-- "0..*" Invitado : composición >
+
+' Empleado auto-referencia (jerarquía)
+Empleado --> "0..1" Empleado : director >
+
+' Notas explicativas
+note right of Cadena::listaPrograma
+  Por defecto se crea 
+  vacía y se van 
+  agregando programas
+end note
+
+note right of Programa::director
+  Se crea automáticamente 
+  en el constructor y se 
+  añade a listaEmpleado
+end note
+
+note right of Programa::listaEmpleado
+  Por defecto: 0 empleados 
+  excepto el director
+end note
+
+note right of Programa::listaInvitado
+  Por defecto: 0 invitados 
+  hasta que se añadan
+end note
+
+note right of Empleado::id
+  Autogenerado: 
+  EP001, EP002...
+end note
+
+note right of Empleado::cargo
+  Valores válidos:
+  director, técnico,
+  presentador, colaborador.
+  Si no: "pte"
+end note
+
+note right of Empleado::director
+  Si cargo es "director"
+  → null
+end note
+
+note right of Invitado::fecha_visita
+  Se solicita por teclado 
+  en el constructor
+end note
+
+title Diagrama de Clases - El Formiguero y La Rebelión\n@author Manuela Planelles Lucas | @version 1.0
+
+@enduml
+```
+
+</details>
+
+---
+
+## 9. Conclusión.
+
+Al principio, el planteamiento parecía sencillo: crear unas clases, añadir algunos atributos y métodos, y listo. Pero la realidad fue bastante diferente. La clave estuvo en seguir el PDF al pie de la letra, sin intentar adelantarme al resto del pdf, esto hacia  que fuese más "facil" de construir.
+
+Las dificultades fueron los metodos extras, la comparacion de fechas, el rastreo de invitados,... esos les he dado muchas vueltas y buscado y comparado con otros, y empezaba a entender como desarrollarlos, pero no terminaba de cuadrar correctamente y tuve que consultar con la ia, evite que me dise la respuesta, sino más bien que me explicase y ayudase a entender y que me dise ejemplos similares. 
+
+Tambien tube algunas dificultades con cosas tan sencillas como editar el toString (no entendia del todo que era lo que pedias, esta clase me la salte).
+
+Sobre la documentacion, JavaDoc no tuve ningun problema, igual que en el diagrama, pero en JUnit5 si que tire de ia, ya en su dia no supe como realizar las pruebas, y mirando los apuntes no salia como esperaba (practicare para las proximas entregas o las que tengo pendiente).
+
+Esta practica me ayudado a comprender mas la estructura de objeta y la relacion, practicar algunos metodos o enlazarlos, esta claro que necesito practicar mucho más para conseguir una autonomia completa, pero con la practica estoy algo mas cerca.
+
+Y sí, las IAs pueden ayudar mucho en el camino, pero solo si sabemos qué preguntar y cómo aplicar las respuestas, y la intención que tengas con ella. Al final, el código lo escribo, y la responsabilidad de entenderlo es mia.
+
+---
+
+
+
+
+
+
+
+
 
