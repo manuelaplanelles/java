@@ -385,7 +385,7 @@ public class Cadena {
 ```
 </details>
 
- [Comprobación 3.]()
+ [Comprobación 3.](https://github.com/manuelaplanelles/1Daw/blob/main/javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/README.md#comprobamos-sobre-la-clase-cadena)
 
 
 ### 3.2. Métodos extras implementados
@@ -430,6 +430,7 @@ Comentar el código siguiendo el estándar Javadoc.
 Crear el diagrama UML con PlantUML.
 
 ---
+
 
 
 
