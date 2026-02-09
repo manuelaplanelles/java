@@ -823,7 +823,9 @@ class CadenaTest {
 }
 ```
 </details>
+
 ![Resultado](./img_doc/cadenaTest.jpg)
+
 
 ProgramaTest
 <details>
@@ -1012,6 +1014,7 @@ InvitadoTest
 - Crear el diagrama UML con PlantUML.
 
 ---
+
 
 
 
