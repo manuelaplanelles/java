@@ -629,19 +629,86 @@ public class Invitado {
 ```
 > _b) Método invitadosTemporada(int temporada) que muestre cuántos Invitados han acudido al Programa dada una temporada. Muestra también sus nombres y profesiones._
 >
-
+Recorre la lista de invitados, si la temporada coincide, incrementa el contador y muestra nombre y profesión. Al final muestra el total
+```java
+public void invitadosTemporada(int temporada) {
+    int contador = 0;
+    
+    System.out.println("=== Invitados de la temporada " + temporada + " ===");
+    
+    for (Invitado invitado : listaInvitado) {
+        if (invitado.getTemporada() == temporada) {
+            contador++;
+            System.out.println("- " + invitado.getNombre() + " (" + invitado.getProfesion() + ")");
+        }
+    }
+    
+    System.out.println("Total de invitados en temporada " + temporada + ": " + contador);
+}
+```
 > _c) Método int vecesInvitado(String nombre) que devuelva las veces que ha ido un Invitado al Programa._
 >
-
+Recorre la lista de invitados, si el nombre coincide (ignorando mayúsculas/minúsculas), incrementa el contador. Devuelve el total de veces
+```java
+public int vecesInvitado(String nombre) {
+    int veces = 0;
+    
+    for (Invitado invitado : listaInvitado) {
+        if (invitado.getNombre().equalsIgnoreCase(nombre)) {
+            veces++;
+        }
+    }
+    
+    return veces;
+}
+```
 > _d) Método rastrearInvitado(String nombre) que haga uso del método creado en el apartado anterior e imprima las veces que ha ido un Invitado al Programa, además de mostrar también en qué fechas y temporadas._
 >
-
+Llama a 'vecesInvitado(nombre)' para obtener el total, recorre la lista y muestra fecha y temporada de cada visita. Si no ha visitado, lo indica
+```java
+public void rastrearInvitado(String nombre) {
+    // Usar el método del apartado anterior
+    int veces = vecesInvitado(nombre);
+    
+    System.out.println("=== Rastreo de " + nombre + " ===");
+    System.out.println("Ha visitado el programa " + veces + " veces");
+    
+    if (veces > 0) {
+        System.out.println("Detalles de las visitas:");
+        for (Invitado invitado : listaInvitado) {
+            if (invitado.getNombre().equalsIgnoreCase(nombre)) {
+                System.out.println("- Fecha: " + invitado.getFecha_visita() + 
+                                 ", Temporada: " + invitado.getTemporada());
+            }
+        }
+    } else {
+        System.out.println(nombre + " no ha visitado el programa.");
+    }
+}
+```
 > _e) Método boolean buscarInvitado(String nombre) para que dado un Invitado sea capaz de buscar si ha acudido a un Programa._
 >
-
+Recorre la lista de invitados, si encuentra el nombre, devuelve 'true' y si termina el bucle sin encontrarlo, devuelve 'false'
+```java
+public boolean buscarInvitado(String nombre) {
+    for (Invitado invitado : listaInvitado) {
+        if (invitado.getNombre().equalsIgnoreCase(nombre)) {
+            return true; // Encontrado
+        }
+    }
+    return false; // No encontrado
+}
+```
 > _f) Método invitadoAntes(String nombre) que use el método implementado en el apartado anterior para que en caso de haber devuelto true buscando en dos Programas distintos, muestre en cuál ha estado antes._
 >
-
+Datos de dos fechas, y las compara cual es mayor con un if
+```java
+LocalDate fecha1 = LocalDate.of(2023, 5, 10); 
+LocalDate fecha2 = LocalDate.of(2024, 1, 31); 
+if (fecha1.isBefore(fecha2)) { 
+    System.out.println("fecha1 es ANTES que fecha2");
+}
+```
 ---
 
 ## 4. Relaciones entre clases
@@ -684,6 +751,7 @@ public class Invitado {
 - Crear el diagrama UML con PlantUML.
 
 ---
+
 
 
 
