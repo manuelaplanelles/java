@@ -1219,13 +1219,23 @@ title Diagrama de Clases - El Formiguero y La Rebelión\n@author Manuela Planell
 
 </details>
 ---
+
 ## 9. Conclusión.
+
 Al principio, el planteamiento parecía sencillo: crear unas clases, añadir algunos atributos y métodos, y listo. Pero la realidad fue bastante diferente. La clave estuvo en seguir el PDF al pie de la letra, sin intentar adelantarme al resto del pdf, esto hacia  que fuese más "facil" de construir.
+
 Las dificultades fueron los metodos extras, la comparacion de fechas, el rastreo de invitados,... esos les he dado muchas vueltas y buscado y comparado con otros, y empezaba a entender como desarrollarlos, pero no terminaba de cuadrar correctamente y tuve que consultar con la ia, evite que me dise la respuesta, sino más bien que me explicase y ayudase a entender y que me dise ejemplos similares. 
+
 Tambien tube algunas dificultades con cosas tan sencillas como editar el toString (no entendia del todo que era lo que pedias, esta clase me la salte).
+
 Sobre la documentacion, JavaDoc no tuve ningun problema, igual que en el diagrama, pero en JUnit5 si que tire de ia, ya en su dia no supe como realizar las pruebas, y mirando los apuntes no salia como esperaba (practicare para las proximas entregas o las que tengo pendiente).
+
 Esta practica me ayudado a comprender mas la estructura de objeta y la relacion, practicar algunos metodos o enlazarlos, esta claro que necesito practicar mucho más para conseguir una autonomia completa, pero con la practica estoy algo mas cerca.
-Y sí, las IAs pueden ayudar mucho en el camino, pero solo si sabemos qué preguntar y cómo aplicar las respuestas, y la intención que tengas con ella. Al final, el código lo escribo, y la responsabilidad de entenderlo es mia
+
+Y sí, las IAs pueden ayudar mucho en el camino, pero solo si sabemos qué preguntar y cómo aplicar las respuestas, y la intención que tengas con ella. Al final, el código lo escribo, y la responsabilidad de entenderlo es mia.
+
+---
+
 
 
 
