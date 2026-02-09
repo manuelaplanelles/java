@@ -692,10 +692,10 @@ Recorre la lista de invitados, si encuentra el nombre, devuelve 'true' y si term
 public boolean buscarInvitado(String nombre) {
     for (Invitado invitado : listaInvitado) {
         if (invitado.getNombre().equalsIgnoreCase(nombre)) {
-            return true; // Encontrado
+            return true;
         }
     }
-    return false; // No encontrado
+    return false;
 }
 ```
 > _f) Método invitadoAntes(String nombre) que use el método implementado en el apartado anterior para que en caso de haber devuelto true buscando en dos Programas distintos, muestre en cuál ha estado antes._
@@ -750,6 +750,7 @@ if (fecha1.isBefore(fecha2)) {
 - Crear el diagrama UML con PlantUML.
 
 ---
+
 
 
 
