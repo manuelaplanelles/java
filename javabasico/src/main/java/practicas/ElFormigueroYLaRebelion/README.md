@@ -763,7 +763,248 @@ public class AppProgramas {
 
 ---
 ### 6.2. Pruebas con JUnit5.
-- Pruebas unitarias de los método implementados con JUnit5.
+- Pruebas unitarias de los método implementados con JUnit5, por cada clase:
+** CadenaTest
+<details>
+<summary>Ver el código completo de la clase Empleado</summary>
+
+```java
+package practicas.ElFormigueroYLaRebelion;
+
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+
+class CadenaTest {
+
+    @Test
+    void agregarPrograma() {
+        Cadena cadena = new Cadena("Antena 3");
+        Programa prog = new Programa("El Hormiguero", null, "Director1");
+        
+        cadena.agregarPrograma(prog);
+        
+        assertEquals(1, cadena.getListaPrograma().size());
+    }
+
+    @Test
+    void eliminarPrograma() {
+        Cadena cadena = new Cadena("Antena 3");
+        Programa prog = new Programa("El Hormiguero", null, "Director1");
+        cadena.agregarPrograma(prog);
+        
+        cadena.eliminarPrograma(prog);
+        
+        assertEquals(0, cadena.getListaPrograma().size());
+    }
+
+    @Test
+    void getNombre() {
+        Cadena cadena = new Cadena("Antena 3");
+        
+        assertEquals("Antena 3", cadena.getNombre());
+    }
+
+    @Test
+    void setNombre() {
+        Cadena cadena = new Cadena("Antena 3");
+        
+        cadena.setNombre("Telecinco");
+        
+        assertEquals("Telecinco", cadena.getNombre());
+    }
+
+    @Test
+    void getListaPrograma() {
+        Cadena cadena = new Cadena("Antena 3");
+        
+        assertNotNull(cadena.getListaPrograma());
+        assertEquals(0, cadena.getListaPrograma().size());
+    }
+}
+```
+</details>
+
+![Resultado](./img_doc/)
+
+** ProgramaTest
+<details>
+<summary>Ver el código completo de la clase Empleado</summary>
+
+```java
+package practicas.ElFormigueroYLaRebelion;
+
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+
+class ProgramaTest {
+
+    @Test
+    void insertarEmpleado() {
+        Programa prog = new Programa("El Hormiguero", null, "Director1");
+        
+        prog.insertarEmpleado("Pablo Motos", "presentador", null);
+        
+        assertEquals(2, prog.getListaEmpleado().size());
+    }
+
+    @Test
+    void eliminarEmpleado() {
+        Programa prog = new Programa("El Hormiguero", null, "Director1");
+        Empleado emp = prog.getListaEmpleado().get(0);
+        
+        prog.eliminarEmpleado(emp);
+        
+        assertEquals(0, prog.getListaEmpleado().size());
+    }
+
+    @Test
+    void vecesInvitado() {
+        Programa prog = new Programa("El Hormiguero", null, "Director1");
+        // Nota: Este test no funciona porque insertarInvitado pide datos por consola
+        // Se puede probar manualmente
+        
+        int veces = prog.vecesInvitado("Aitana");
+        
+        assertEquals(0, veces);
+    }
+
+    @Test
+    void buscarInvitado() {
+        Programa prog = new Programa("El Hormiguero", null, "Director1");
+        
+        boolean encontrado = prog.buscarInvitado("Aitana");
+        
+        assertFalse(encontrado);
+    }
+
+    @Test
+    void getNombre() {
+        Programa prog = new Programa("El Hormiguero", null, "Director1");
+        
+        assertEquals("El Hormiguero", prog.getNombre());
+    }
+
+    @Test
+    void setNombre() {
+        Programa prog = new Programa("El Hormiguero", null, "Director1");
+        
+        prog.setNombre("La Rebelión");
+        
+        assertEquals("La Rebelión", prog.getNombre());
+    }
+
+    @Test
+    void getTemporadas() {
+        Programa prog = new Programa("El Hormiguero", null, "Director1");
+        
+        assertEquals(0, prog.getTemporadas());
+    }
+
+    @Test
+    void setTemporadas() {
+        Programa prog = new Programa("El Hormiguero", null, "Director1");
+        
+        prog.setTemporadas(5);
+        
+        assertEquals(5, prog.getTemporadas());
+    }
+
+    @Test
+    void getDirector() {
+        Programa prog = new Programa("El Hormiguero", null, "Director1");
+        
+        assertNotNull(prog.getDirector());
+        assertEquals("Director1", prog.getDirector().getNombre());
+    }
+}
+```
+</details>
+
+![Resultado](./img_doc/)
+
+** EmpleadoTest
+<details>
+<summary>Ver el código completo de la clase Empleado</summary>
+
+```java
+package practicas.ElFormigueroYLaRebelion;
+
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
+class EmpleadoTest {
+
+    @Test
+    void getId() {
+        Empleado emp = new Empleado("Juan", "técnico", null);
+        
+        assertNotNull(emp.getId());
+        assertTrue(emp.getId().startsWith("EP"));
+    }
+
+    @Test
+    void getNombre() {
+        Empleado emp = new Empleado("Juan", "técnico", null);
+        
+        assertEquals("Juan", emp.getNombre());
+    }
+
+    @Test
+    void setNombre() {
+        Empleado emp = new Empleado("Juan", "técnico", null);
+        
+        emp.setNombre("Pedro");
+        
+        assertEquals("Pedro", emp.getNombre());
+    }
+
+    @Test
+    void getCargo() {
+        Empleado emp = new Empleado("Juan", "técnico", null);
+        
+        assertEquals("técnico", emp.getCargo());
+    }
+
+    @Test
+    void setCargo() {
+        Empleado emp = new Empleado("Juan", "técnico", null);
+        
+        emp.setCargo("presentador");
+        
+        assertEquals("presentador", emp.getCargo());
+    }
+
+    @Test
+    void setCargoInvalido() {
+        Empleado emp = new Empleado("Juan", "actor", null);
+        
+        assertEquals("pte", emp.getCargo());
+    }
+
+    @Test
+    void getDirector() {
+        Empleado director = new Empleado("Director1", "director", null);
+        Empleado emp = new Empleado("Juan", "técnico", director);
+        
+        assertNotNull(emp.getDirector());
+        assertEquals("Director1", emp.getDirector().getNombre());
+    }
+
+    @Test
+    void directorSinDirector() {
+        Empleado director = new Empleado("Director1", "director", null);
+        
+        assertNull(director.getDirector());
+    }
+}
+```
+</details>
+
+![Resultado](./img_doc/)
+
+** InvitadoTest
+- El constructor de Invitado pide datos por consola con Scanner, lo cual NO SE PUEDE TESTEAR en JUnit.
+
 ---
 ## 7. Documentación Javadoc:
 - Comentar el código siguiendo el estándar Javadoc.
@@ -772,4 +1013,5 @@ public class AppProgramas {
 - Crear el diagrama UML con PlantUML.
 
 ---
+
 
