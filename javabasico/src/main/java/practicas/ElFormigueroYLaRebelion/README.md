@@ -667,7 +667,6 @@ public int vecesInvitado(String nombre) {
 Llama a 'vecesInvitado(nombre)' para obtener el total, recorre la lista y muestra fecha y temporada de cada visita. Si no ha visitado, lo indica
 ```java
 public void rastrearInvitado(String nombre) {
-    // Usar el método del apartado anterior
     int veces = vecesInvitado(nombre);
     
     System.out.println("=== Rastreo de " + nombre + " ===");
@@ -751,6 +750,7 @@ if (fecha1.isBefore(fecha2)) {
 - Crear el diagrama UML con PlantUML.
 
 ---
+
 
 
 
