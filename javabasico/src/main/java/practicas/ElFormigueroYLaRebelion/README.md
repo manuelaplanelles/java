@@ -595,6 +595,7 @@ public class Programa {
 ### 3.2. Métodos extras implementados.
 - Sobre:
 > _a) Modifica el constructor de Invitados para que llame al set de fecha_visita con una fecha que le vamos a preguntar al usuario para guardar cuándo tienen que ir al Programa._
+> 
 Implementamos en el constructor, y tambien pedimos fecha al usuario y llamamos al set de fecha_vista para asignar la fecha
 ```java
 import java.time.LocalDate;
@@ -669,6 +670,7 @@ public class Invitado {
 - Crear el diagrama UML con PlantUML.
 
 ---
+
 
 
 
