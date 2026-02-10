@@ -31,16 +31,14 @@ public class Influencer extends Usuario {
         System.out.println("Edad: " + getEdad());
         System.out.println("Nombre de usuario: " + getNomUsuario());
         System.out.println("Seguidores: " + getSeguidores());
-        System.out.print("Colaboraciones: ");
+        System.out.println("Colaboraciones: ");
 
-        // Mostramos las colaboraciones entre comillas y separadas por comas
         for (int i = 0; i < colaboraciones.size(); i++) {
-            System.out.print("\"" + colaboraciones.get(i) + "\"");
-            // Si no es el ultimo elemento, ponemos coma y espacio
+            System.out.println(colaboraciones.get(i) );
+
             if (i < colaboraciones.size() - 1) {
-                System.out.print(", ");
+                System.out.println(", ");
             }
         }
-        System.out.println(".");
     }
 }

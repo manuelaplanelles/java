@@ -1,32 +1,32 @@
 package u06_herencia.RedesSociales;
 
 public class RedSocial {
-    public static void main(String[] args) {
-<<<<<<< HEAD
 
-=======
-        Usuario ana = new Usuario("Ana", 30, "@ana", 231);
 
-        Influencer luis = new Influencer("Luis", 25, "@luis_influencer", 50000);
-        luis.agregarColaboracion("MediaMarkt");
-        luis.agregarColaboracion("Yoigo");
-        luis.agregarColaboracion("Temu");
+        public static void main(String[] args) {
 
-        Streamer carlos = new Streamer("Carlos", 27, "@carlos_stream", 0, 150, 2000);
+            Usuario ana = new Usuario("Ana", 30, "@ana", 231);
 
-        Basico pedro = new Basico("Pedro", 22, "@pedro123", 455);
+            Influencer luis = new Influencer("Luis", 25, "@luis_influencer", 50000);
 
-        System.out.println();
-        ana.mostrarInfo();
+            luis.agregarColaboracion("MediaMarkt");
+            luis.agregarColaboracion("Yoigo");
+            luis.agregarColaboracion("Temu");
 
-        System.out.println();
-        luis.mostrarInfo();
+            Streamer carlos = new Streamer("Carlos", 27, "@carlos_stream", 0, 150, 2000);
 
-        System.out.println();
-        carlos.mostrarInfo();
+            Basico pedro = new Basico("Pedro", 22, "@pedro123", 455);
 
-        System.out.println();
-        pedro.mostrarInfo();
-    }
->>>>>>> 422fea91816c774def260b7145edc81a407de6df
+            System.out.println();
+            ana.mostrarInfo();
+
+            System.out.println();
+            luis.mostrarInfo();
+
+            System.out.println();
+            carlos.mostrarInfo();
+
+            System.out.println();
+            pedro.mostrarInfo();
+        }
     }
