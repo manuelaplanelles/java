@@ -1,8 +1,9 @@
-![Banner](//src/main/java/practicas/ElFormigueroYLaRebelion/img_doc/banner.png)
 
-# Práctica 1. "El Formiguero" y "La Rebelión"
-
-Manuela Planelles - 1º DAW - IES Mutxamel
+<p align="center">
+  <img src="img_doc/banner.png" alt="Learning Curve Banner" width="100%">
+</p>
+<h1 align="center"> Práctica 1. "El Formiguero" y "La Rebelión" </h1>
+<h2 align="center"> Manuela Planelles - 1º DAW - IES Mutxamel</h2>
 
 ---
 
