@@ -100,7 +100,7 @@ public abstract class MetodoPago {
 Creamos la clase que extiende de `MetodoPago`, los atributos, el constructor, getters/setters y toString.
 
 ```java
-class TarjetaCredito extends MetodoPago {
+public class TarjetaCredito extends MetodoPago {
 
     private String nro_tarjeta;
     private String tipoTarjeta;
@@ -187,7 +187,7 @@ public boolean validarTarjeta() {
 <summary>Ver el código completo de la clase TarjetaCredito</summary>
   
 ```java
-class TarjetaCredito extends MetodoPago {
+public class TarjetaCredito extends MetodoPago {
 
     private String nro_tarjeta;
     private String tipoTarjeta;
@@ -270,7 +270,7 @@ class TarjetaCredito extends MetodoPago {
 Creamos la clase que extiende de `MetodoPago`, con los atributos, constructor, getters/setters y toString. Dejamos marcado por defecto los 23€ dentro del constructor.
 
 ```java
-class PayPal extends MetodoPago {
+public class PayPal extends MetodoPago {
     private String correo;
     private double saldo;
 
@@ -348,7 +348,7 @@ public boolean validarPayPal(double importe) {
 <summary>Ver el código completo de la clase PayPal</summary>
   
 ```java
-class PayPal extends MetodoPago {
+public class PayPal extends MetodoPago {
     private String correo;
     private double saldo;
 
@@ -425,7 +425,7 @@ Como se indica, creamos los atributos, el constructor y los getters/setters y to
 import java.util.Random;
 import java.util.Scanner;
 
-class Bizum extends MetodoPago {
+public class Bizum extends MetodoPago {
     private String telefono;
     private int pin;
 
@@ -518,7 +518,7 @@ public boolean validarBizum() {
 import java.util.Random;
 import java.util.Scanner;
 
-class Bizum extends MetodoPago {
+public class Bizum extends MetodoPago {
     private String telefono;
     private int pin;
 
