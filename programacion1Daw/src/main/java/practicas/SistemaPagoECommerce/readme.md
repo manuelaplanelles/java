@@ -898,18 +898,93 @@ public abstract class MetodoPago {
 }
 ```
 
-Se genera la documentación HTML ejecutando:
+- Se adjunta en la misma carpeta del proyecto los zip la documentacion de JavaDoc.
 
-```bash
-javadoc -d docs -encoding UTF-8 -charset UTF-8 *.java
-```
+  ![JavaDoc](./img/javadoc.png)
+  
 
 ---
 
 ## 7. Diagrama UML
 
-_[Aquí irá tu diagrama UML]_
+Solicitamos a ChartGPT que nos cree un codigo de un diagrama de relación entre varias clases parea PlantUML.
 
+  ![diagrama ](./img/diagrama.png)
+
+  Ver el código para PlantUML
+  <details>
+<summary>Ver el código completo de la clase Tienda</summary>
+  
+```java
+@startuml
+skinparam classAttributeIconSize 0
+
+package practicas.SistemaPagoECommerce {
+
+    class AppEcommerce {
+        + {static} main(args: String[])
+    }
+
+    abstract class MetodoPago {
+        + MetodoPago()
+        + {abstract} procesarPago(importe: double)
+    }
+
+    class TarjetaCredito {
+        - nro_tarjeta: String
+        - tipoTarjeta: String
+        + TarjetaCredito(nro_tarjeta: String, tipoTarjeta: String)
+        + validarTarjeta(): boolean
+        + getNro_tarjeta(): String
+        + setNro_tarjeta(nro_tarjeta: String)
+        + getTipoTarjeta(): String
+        + setTipoTarjeta(tipoTarjeta: String)
+        + toString(): String
+        + procesarPago(importe: double)
+    }
+
+    class Bizum {
+        - telefono: String
+        - pin: int
+        + Bizum(telefono: String)
+        + validarBizum(): boolean
+        + getTelefono(): String
+        + setTelefono(telefono: String)
+        + getPin(): int
+        + setPin(pin: int)
+        + toString(): String
+        + procesarPago(importe: double)
+    }
+
+    class PayPal {
+        - correo: String
+        + PayPal(correo: String)
+        + validarPayPal(importe: double): boolean
+        + procesarPago(importe: double)
+    }
+
+    class Tienda {
+        + {static} realizarPago(metodo: MetodoPago)
+        + {static} iniciarPago()
+    }
+
+    ' Relaciones de Herencia
+    MetodoPago <|-- TarjetaCredito
+    MetodoPago <|-- Bizum
+    MetodoPago <|-- PayPal
+
+    ' Relaciones de Dependencia y Uso
+    AppEcommerce ..> Tienda : "inicia"
+    Tienda ..> MetodoPago : "utiliza"
+    Tienda ..> TarjetaCredito : "instancia"
+    Tienda ..> Bizum : "instancia"
+    Tienda ..> PayPal : "instancia"
+
+}
+@enduml
+```
+
+</details>
 ---
 
 ## 8. Conclusión
