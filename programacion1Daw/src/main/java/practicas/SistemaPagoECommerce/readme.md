@@ -54,6 +54,48 @@ La práctica persigue los siguientes objetivos:
 - Modularizar el código en métodos auxiliares para mantener el código organizado.
 
 ---
+
+## 3. Diseño e Implementación del programa.
+
+### 3.1. Estructura de clases
+
+En esta practica se desarrolla clase por clase, lo primero que hacemos es crear la clase main 'AppEcommerce' para ir haciendo las comprobaciones del codigo y a continuación seguiriamos con el orden que marca el pdf creando cada clase y sus metodos.
+
+![Clases](./img/clases.jpg)
+
+---
+#### Clase `AppEcommerce`
+Creamos la clase AppProgramas, unicamente con el main e iremos completandola para las pruebas.
+```java
+
+```
+#### Clase `MetodoPago`
+Creamos la clase AppProgramas, unicamente con el main e iremos completandola para las pruebas.
+```java
+
+```
+#### Clase `TarjetaCredito`
+Creamos la clase AppProgramas, unicamente con el main e iremos completandola para las pruebas.
+```java
+
+```
+#### Clase `PayPal`
+Creamos la clase AppProgramas, unicamente con el main e iremos completandola para las pruebas.
+```java
+
+```
+#### Clase `Bizum`
+Creamos la clase AppProgramas, unicamente con el main e iremos completandola para las pruebas.
+```java
+
+```
+#### Clase `Tienda`
+Creamos la clase AppProgramas, unicamente con el main e iremos completandola para las pruebas.
+```java
+
+```
+
+---
 ## 4. Relaciones entre clases.
 
 | Relación | Tipo | Descripción |
