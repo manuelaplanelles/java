@@ -7,7 +7,7 @@ package practicas.SistemaPagoECommerce;
  * @version 1.0
  * @see MetodoPago
  */
-class TarjetaCredito extends MetodoPago {
+public class TarjetaCredito extends MetodoPago {
 
     /** Número de la tarjeta (debe tener 16 dígitos) */
     private String nro_tarjeta;

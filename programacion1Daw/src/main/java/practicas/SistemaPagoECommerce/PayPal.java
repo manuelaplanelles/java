@@ -7,7 +7,7 @@ package practicas.SistemaPagoECommerce;
  * @version 1.0
  * @see MetodoPago
  */
-class PayPal extends MetodoPago {
+public class PayPal extends MetodoPago {
 
     /** Correo electrónico de la cuenta PayPal */
     private String correo;

@@ -10,7 +10,7 @@ import java.util.Scanner;
  * @version 1.0
  * @see MetodoPago
  */
-class Bizum extends MetodoPago {
+public class Bizum extends MetodoPago {
 
     /** Número de teléfono vinculado a Bizum (9 dígitos) */
     private String telefono;

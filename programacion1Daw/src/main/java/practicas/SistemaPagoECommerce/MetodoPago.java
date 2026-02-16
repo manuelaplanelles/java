@@ -9,7 +9,7 @@ package practicas.SistemaPagoECommerce;
  * @see PayPal
  * @see Bizum
  */
-abstract class MetodoPago {
+public abstract class MetodoPago {
 
     /**
      * Constructor por defecto de MetodoPago
