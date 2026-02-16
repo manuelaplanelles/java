@@ -65,21 +65,184 @@ En esta práctica se desarrolla el código clase por clase. Lo primero que hacem
 
 ---
 #### Clase `AppEcommerce`
+
 ```java
 
 ```
 #### Clase `MetodoPago`
-```java
 
+> _"Una clase abstracta llamada MetodoPago, con el siguiente método abstracto: void procesarPago(double importe)"_
+
+Declaramos una clase abstractos, el metodo sin implementacion para las subclases y con el parametro que se indica en el pdf para recibir la cantida a pagar.
+```java
+abstract class MetodoPago {
+
+    public MetodoPago(){
+    }
+
+    public abstract void procesarPago (double importe);
+
+}
 ```
 #### Clase `TarjetaCredito`
+>_"La clase TarjetaCredito tendrá los atributos nro_tarjeta (String de 16 caracteres) y tipo (String que debe permitir solamente los siguientes valores: VISA, MASTERCARD, MAESTRO)._
+
+Creamos la clase con la extension de 'MetodoPago', los atributos, el constructor, get y set y toString. 
+
 ```java
 
-```
-#### Clase `PayPal`
-```java
+class TarjetaCredito extends MetodoPago{
 
+    private String nro_tarjeta;
+    private String tipoTarjeta;
+
+    public TarjetaCredito(String nro_tarjeta, String tipoTarjeta){
+        super();
+        this.nro_tarjeta = nro_tarjeta;
+        this.tipoTarjeta = tipoTarjeta;
+
+    }
+   
+    public String getNro_tarjeta() {
+        return nro_tarjeta;
+    }
+
+    public void setNro_tarjeta(String nro_tarjeta) {
+        this.nro_tarjeta = nro_tarjeta;
+    }
+
+    public String getTipoTarjeta() {
+        return tipoTarjeta;
+    }
+
+    public void setTipoTarjeta(String tipoTarjeta) {
+        this.tipoTarjeta = tipoTarjeta;
+    }
+    @Override
+    public String toString() {
+        return "TarjetaCredito{" +
+                "nro_tarjeta='" + nro_tarjeta + '\'' +
+                ", tipoTarjeta='" + tipoTarjeta + '\'' +
+                '}';
+    }
+}
 ```
+>_"- El método procesarPago() debe imprimir "Procesando pago de [importe] € con tarjeta de crédito [tipo]"._
+
+
+```java
+    @Override
+    public void procesarPago(double importe) {
+        System.out.println("Procesando pago de " + importe +  "€ con tarjeta de crédito " + tipoTarjeta);
+
+    }
+```
+
+>_- Debe haber un método más en la clase para validarTarjeta(), que compruebe que el nro_tarjeta introducido tenga la longitud esperada y el tipo esté dentro de los valores permitidos."_
+
+Pasamos al metodo de validarTarjeta; la creamos con boolean para hacer las validaciones, y usamos un if para cada validacion. para comprobar el numero de tarjeta, usamos '.matches' \\d es para comprobar que lo que se introducen son numero y el + para todos los caracteres.
+
+```java
+ public boolean validarTarjeta(){
+       boolean valida = true;
+        if(!nro_tarjeta.matches("\\d+")){
+            System.out.println("Solo se admiten números.");
+            valida = false;
+        }
+
+        if (nro_tarjeta.length() != 16){
+            System.out.println("Solo se admiten 16 números.");
+            valida = false;
+        }
+
+        if ((!tipoTarjeta.equalsIgnoreCase("VISA")) &&
+                (!tipoTarjeta.equalsIgnoreCase("MASTERCARD")) &&
+                (!tipoTarjeta.equalsIgnoreCase("MAESTRO")) ){
+            System.out.println("Solo se aceptan VISA, MASTERCARD y MAESTRO");
+            valida = false;
+        }
+        if (valida){
+            System.out.println("Validando tarjeta...");
+        }
+
+        return valida;
+    }
+```
+
+<details>
+<summary>Ver el código completo de la clase TarjetaCredito</summary>
+
+```java
+class TarjetaCredito extends MetodoPago{
+
+    private String nro_tarjeta;
+    private String tipoTarjeta;
+
+    public TarjetaCredito(String nro_tarjeta, String tipoTarjeta){
+        super();
+        this.nro_tarjeta = nro_tarjeta;
+        this.tipoTarjeta = tipoTarjeta;
+
+    }
+    public boolean validarTarjeta(){
+        boolean valida = true;
+        if(!nro_tarjeta.matches("\\d+")){
+            System.out.println("Solo se admiten números.");
+            valida = false;
+        }
+
+        if (nro_tarjeta.length() != 16){
+            System.out.println("Solo se admiten 16 números.");
+            valida = false;
+        }
+
+        if ((!tipoTarjeta.equalsIgnoreCase("VISA")) &&
+                (!tipoTarjeta.equalsIgnoreCase("MASTERCARD")) &&
+                (!tipoTarjeta.equalsIgnoreCase("MAESTRO")) ){
+            System.out.println("Solo se aceptan VISA, MASTERCARD y MAESTRO");
+            valida = false;
+        }
+        if (valida){
+            System.out.println("Validando tarjeta...");
+        }
+
+        return valida;
+    }
+
+    public String getNro_tarjeta() {
+        return nro_tarjeta;
+    }
+
+    public void setNro_tarjeta(String nro_tarjeta) {
+        this.nro_tarjeta = nro_tarjeta;
+    }
+
+    public String getTipoTarjeta() {
+        return tipoTarjeta;
+    }
+
+    public void setTipoTarjeta(String tipoTarjeta) {
+        this.tipoTarjeta = tipoTarjeta;
+    }
+    @Override
+    public String toString() {
+        return "TarjetaCredito{" +
+                "nro_tarjeta='" + nro_tarjeta + '\'' +
+                ", tipoTarjeta='" + tipoTarjeta + '\'' +
+                '}';
+    }
+    @Override
+    public void procesarPago(double importe) {
+        System.out.println("Procesando pago de " + importe +  "€ con tarjeta de crédito " + tipoTarjeta);
+
+    }
+}
+```
+</details>
+
+ [Comprobación]()
+
+ 
 #### Clase `Bizum`
 ```java
 
@@ -108,7 +271,13 @@ En esta práctica se desarrolla el código clase por clase. Lo primero que hacem
    |           |           |
 TarjetaCredito PayPal   Bizum
 ```
+---
 
+## 5. Plan de pruebas
+   - 6.1. Ejemplo de funcionamiento.
+     Comprobacion clase TarjetaCredito:
+     Creamos dos tarjetas una con errores (tarjeta con letras y mas de 16 digitos, y tipo tarjeta no valido) y otra tarjeta correcta. 
+   - 6.2. Pruebas final feliz.
 ---
 ## 6. Documentación JavaDoc
 
