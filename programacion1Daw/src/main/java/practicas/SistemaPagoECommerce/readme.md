@@ -67,6 +67,7 @@ En esta práctica se desarrolla el código clase por clase. Lo primero que hacem
 #### Clase `AppEcommerce`
 
 Clase principal que ejecuta la aplicación llamando al método `iniciarPago()` de la clase `Tienda`.
+
 ```java
 public class AppEcommerce {
     public static void main(String[] args) {
@@ -82,6 +83,7 @@ public class AppEcommerce {
 > _"Una clase abstracta llamada MetodoPago, con el siguiente método abstracto: void procesarPago(double importe)"_
 
 Declaramos una clase abstracta. El método no tiene implementación (las subclases deben implementarlo) y recibe como parámetro el importe a pagar según indica el PDF.
+
 ```java
 public abstract class MetodoPago {
     
@@ -96,6 +98,7 @@ public abstract class MetodoPago {
 > _"La clase TarjetaCredito tendrá los atributos nro_tarjeta (String de 16 caracteres) y tipo (String que debe permitir solamente los siguientes valores: VISA, MASTERCARD, MAESTRO)."_
 
 Creamos la clase que extiende de `MetodoPago`, los atributos, el constructor, getters/setters y toString.
+
 ```java
 class TarjetaCredito extends MetodoPago {
 
@@ -136,6 +139,7 @@ class TarjetaCredito extends MetodoPago {
 > _"El método procesarPago() debe imprimir 'Procesando pago de [importe] € con tarjeta de crédito [tipo]'."_
 
 Al no ser un método nuevo, sino que estamos sobrescribiendo (implementando) el método abstracto de la clase padre, utilizamos la anotación `@Override`. Esta anotación ayuda a detectar errores si nos equivocamos en el nombre o los parámetros.
+
 ```java
 @Override
 public void procesarPago(double importe) {
@@ -146,6 +150,7 @@ public void procesarPago(double importe) {
 > _"Debe haber un método más en la clase para validarTarjeta(), que compruebe que el nro_tarjeta introducido tenga la longitud esperada y el tipo esté dentro de los valores permitidos."_
 
 Creamos el método `validarTarjeta()` que devuelve boolean. Usamos `.matches("\\d+")` donde `\\d` representa cualquier dígito (0-9) y el `+` indica "uno o más", validando que toda la cadena contenga solo números. Usamos `.length()` para verificar que tenga exactamente 16 caracteres. Usamos `.equalsIgnoreCase()` para validar el tipo de tarjeta sin importar mayúsculas/minúsculas.
+
 ```java
 public boolean validarTarjeta() {
     boolean valida = true;
@@ -180,6 +185,7 @@ public boolean validarTarjeta() {
 
 <details>
 <summary>Ver el código completo de la clase TarjetaCredito</summary>
+  
 ```java
 class TarjetaCredito extends MetodoPago {
 
@@ -262,6 +268,7 @@ class TarjetaCredito extends MetodoPago {
 > _"La clase PayPal tendrá los atributos cuenta (String con formato de correo electrónico 'xxx@xxx.com') y saldo (double por defecto 23€)."_
 
 Creamos la clase que extiende de `MetodoPago`, con los atributos, constructor, getters/setters y toString. Dejamos marcado por defecto los 23€ dentro del constructor.
+
 ```java
 class PayPal extends MetodoPago {
     private String correo;
@@ -301,6 +308,7 @@ class PayPal extends MetodoPago {
 > _"El método procesarPago() debe imprimir 'Procesando pago de [importe] € con PayPal'."_
 
 Tal cual se hizo en la clase de tarjeta, se sobrescribe el método del padre.
+
 ```java
 @Override
 public void procesarPago(double importe) {
@@ -311,6 +319,7 @@ public void procesarPago(double importe) {
 > _"En este caso, el método validarPayPal() debe comprobar que el formato del correo electrónico es correcto y que el saldo de la cuenta sea suficiente para realizar el pago correspondiente."_
 
 Repetimos el mismo tipo de estructura que con `validarTarjeta()`, con boolean para las validaciones y utilizamos if. Para el correo validamos que contenga el `@` con `.contains()` y para el saldo indicamos que si el saldo es inferior al importe, que salte el error.
+
 ```java
 public boolean validarPayPal(double importe) {
     boolean valido = true;
@@ -337,6 +346,7 @@ public boolean validarPayPal(double importe) {
 
 <details>
 <summary>Ver el código completo de la clase PayPal</summary>
+  
 ```java
 class PayPal extends MetodoPago {
     private String correo;
@@ -410,6 +420,7 @@ class PayPal extends MetodoPago {
 > _"La clase Bizum tendrá los atributos telefono (String de 9 caracteres) y pin (int de 6 dígitos que se generará de forma aleatoria)."_
 
 Como se indica, creamos los atributos, el constructor y los getters/setters y toString. Dentro del constructor generamos un PIN aleatorio de 6 dígitos usando `Random`. La expresión `random.nextInt(900000) + 100000` genera números entre 100000 y 999999. Según indica el PDF, imprimimos el PIN para poder realizar pruebas.
+
 ```java
 import java.util.Random;
 import java.util.Scanner;
@@ -454,6 +465,7 @@ class Bizum extends MetodoPago {
 > _"El método procesarPago() debe imprimir 'Procesando pago de [importe] € con Bizum'."_
 
 Tal cual se hizo en las clases anteriores, se sobrescribe el método del padre.
+
 ```java
 @Override
 public void procesarPago(double importe) {
@@ -464,6 +476,7 @@ public void procesarPago(double importe) {
 > _"El método validarBizum() debe comprobar el formato del teléfono y que el pin introducido por el usuario es el correcto. NOTA: haz trampa e imprime el pin en cuanto se genere para poder ver cuál es y poder realizar el pago."_
 
 La validación del teléfono es similar a la de la tarjeta de crédito. Primero verificamos que solo contenga números con `.matches("\\d+")`. Luego verificamos que tenga exactamente 9 caracteres con `.length()`. Para el PIN, usamos `Scanner` para pedir al usuario que introduzca el PIN y comparamos con el PIN generado aleatoriamente. Si son diferentes, la validación falla.
+
 ```java
 public boolean validarBizum() {
     boolean valido = true;
@@ -500,6 +513,7 @@ public boolean validarBizum() {
 
 <details>
 <summary>Ver el código completo de la clase Bizum</summary>
+  
 ```java
 import java.util.Random;
 import java.util.Scanner;
@@ -588,6 +602,7 @@ class Bizum extends MetodoPago {
 > _"Tendremos otra clase Tienda con un método estático: static void realizarPago(MetodoPago metodo) que pedirá el importe a pagar e invocará al método procesarPago() según el tipo de objeto metodo recibido como parámetro."_
 
 Creamos el método static que se solicita. Usamos `Scanner` para leer el importe introducido por el usuario y llamamos al método `procesarPago()` del objeto recibido. Gracias al polimorfismo, Java ejecuta automáticamente el método correcto según el tipo real del objeto (TarjetaCredito, PayPal o Bizum).
+
 ```java
 public static void realizarPago(MetodoPago metodo) {
     Scanner scanner = new Scanner(System.in);
@@ -602,6 +617,7 @@ public static void realizarPago(MetodoPago metodo) {
 > _"Además, esta clase tendrá otro método estático iniciarPago(), donde previamente preguntará al usuario qué método de pago quiere usar para crear uno nuevo y realizar todas las validaciones correspondientes (validarTarjeta, validarPayPal, validarBizum) antes de ser procesado."_
 
 Creamos el método `iniciarPago()`. Este método funciona como un menú inicial donde el usuario elige su método de pago. Usamos un switch para gestionar las diferentes opciones de forma más limpia y legible que con múltiples if-else. Cada case pide por consola los datos necesarios para ese método de pago y, mediante un if, verificamos que la validación sea correcta antes de procesar el pago.
+
 ```java
 public static void iniciarPago() {
     Scanner scanner = new Scanner(System.in);
@@ -667,6 +683,7 @@ public static void iniciarPago() {
 
 <details>
 <summary>Ver el código completo de la clase Tienda</summary>
+  
 ```java
 import java.util.Scanner;
 
@@ -760,12 +777,14 @@ Las pruebas de esta clase se realizan con [las pruebas finales](#52-pruebas-fina
 | `AppEcommerce` → `Tienda` | Llamada | AppEcommerce invoca métodos estáticos de Tienda |
 
 **Jerarquía de herencia:**
+
 ```
         MetodoPago (abstracta)
                |
    +-----------+-----------+
    |           |           |
 TarjetaCredito PayPal   Bizum
+
 ```
 
 **Explicación de las relaciones:**
@@ -846,6 +865,7 @@ Se comentan todas las clases tanto en la cabecera como en los métodos usando la
 | `@Override` | Indica sobrescritura de método | Métodos procesarPago() y toString() |
 
 **Ejemplo de documentación aplicada:**
+
 ```java
 /**
  * Clase abstracta que representa un método de pago genérico
@@ -864,6 +884,7 @@ public abstract class MetodoPago {
 ```
 
 Se genera la documentación HTML ejecutando:
+
 ```bash
 javadoc -d docs -encoding UTF-8 -charset UTF-8 *.java
 ```
