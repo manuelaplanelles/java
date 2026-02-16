@@ -69,6 +69,7 @@ En esta práctica se desarrolla el código clase por clase. Lo primero que hacem
 ```java
 
 ```
+
 #### Clase `MetodoPago`
 
 > _"Una clase abstracta llamada MetodoPago, con el siguiente método abstracto: void procesarPago(double importe)"_
@@ -84,6 +85,7 @@ abstract class MetodoPago {
 
 }
 ```
+
 #### Clase `TarjetaCredito`
 >_"La clase TarjetaCredito tendrá los atributos nro_tarjeta (String de 16 caracteres) y tipo (String que debe permitir solamente los siguientes valores: VISA, MASTERCARD, MAESTRO)._
 
@@ -129,6 +131,7 @@ class TarjetaCredito extends MetodoPago{
 ```
 >_"- El método procesarPago() debe imprimir "Procesando pago de [importe] € con tarjeta de crédito [tipo]"._
 
+Al no ser un metodo nuevo sino que estoy reescribiendo el metodo que ya existia en la calse padre se escribira con '@Override'
 
 ```java
     @Override
@@ -140,7 +143,7 @@ class TarjetaCredito extends MetodoPago{
 
 >_- Debe haber un método más en la clase para validarTarjeta(), que compruebe que el nro_tarjeta introducido tenga la longitud esperada y el tipo esté dentro de los valores permitidos."_
 
-Pasamos al metodo de validarTarjeta; la creamos con boolean para hacer las validaciones, y usamos un if para cada validacion. para comprobar el numero de tarjeta, usamos '.matches' \\d es para comprobar que lo que se introducen son numero y el + para todos los caracteres.
+Pasamos al metodo de validarTarjeta; la creamos con boolean para hacer las validaciones, y usamos if para cada validacion. para comprobar el numero de tarjeta; usamos '.matches' \\d es para comprobar que lo que se introducen son numero y el + para todos los caracteres, usamos '.length' para la validacion la longitud, '.equalsIgnoreCase' para los tipos de tarjetas indiferente de mayusculas y minusculas
 
 ```java
  public boolean validarTarjeta(){
@@ -273,11 +276,14 @@ TarjetaCredito PayPal   Bizum
 ```
 ---
 
-## 5. Plan de pruebas
-   - 6.1. Ejemplo de funcionamiento.
-     Comprobacion clase TarjetaCredito:
-     Creamos dos tarjetas una con errores (tarjeta con letras y mas de 16 digitos, y tipo tarjeta no valido) y otra tarjeta correcta. 
-   - 6.2. Pruebas final feliz.
+## 5. Plan de pruebas.
+
+   ### 5.1. Ejemplo de funcionamiento.
+   
+   #### 1.Comprobacion clase TarjetaCredito: Creamos dos tarjetas una con errores (tarjeta con letras y mas de 16 digitos, y tipo tarjeta no valido) y otra tarjeta correcta.
+   ![Pruebas Tarjeta de Credito](./img/prueba_validarTarjeta.png)
+   
+   ### 5.2. Pruebas final feliz.
 ---
 ## 6. Documentación JavaDoc
 
