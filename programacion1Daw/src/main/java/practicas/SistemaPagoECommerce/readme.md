@@ -10,8 +10,8 @@
 
 ## Índice
 
-1. [Introducción]([https://github.com/manuelaplanelles/Java/edit/main/programacion1Daw/src/main/java/practicas/SistemaPagoECommerce/readme.md#1-introducci%C3%B3n](https://github.com/manuelaplanelles/Java/blob/main/programacion1Daw/src/main/java/practicas/SistemaPagoECommerce/readme.md#1-introducci%C3%B3n))
-2. [Objetivos de la práctica]([https://github.com/manuelaplanelles/Java/edit/main/programacion1Daw/src/main/java/practicas/SistemaPagoECommerce/readme.md#2-objetivos-de-la-pr%C3%A1ctica](https://github.com/manuelaplanelles/Java/blob/main/programacion1Daw/src/main/java/practicas/SistemaPagoECommerce/readme.md#2-objetivos-de-la-pr%C3%A1ctica))
+1. [Introducción](https://github.com/manuelaplanelles/Java/blob/main/programacion1Daw/src/main/java/practicas/SistemaPagoECommerce/readme.md#1-introducci%C3%B3n)
+2. [Objetivos de la práctica](https://github.com/manuelaplanelles/Java/blob/main/programacion1Daw/src/main/java/practicas/SistemaPagoECommerce/readme.md#2-objetivos-de-la-pr%C3%A1ctica)
 3. [Diseño e Implementación del programa.]()
    - [3.1. Estructura de clases]()
      - [3.1.1. Clase `AppEcommerce`]()
@@ -20,13 +20,13 @@
      - [3.1.4. Clase `PayPal`]()
      - [3.1.5. Clase `Bizum`]()
      - [3.1.6. Clase `Tienda`]()
-4. [Relaciones entre clases]([https://github.com/manuelaplanelles/Java/edit/main/programacion1Daw/src/main/java/practicas/SistemaPagoECommerce/readme.md#4-relaciones-entre-clases](https://github.com/manuelaplanelles/Java/blob/main/programacion1Daw/src/main/java/practicas/SistemaPagoECommerce/readme.md#4-relaciones-entre-clases))
+4. [Relaciones entre clases](https://github.com/manuelaplanelles/Java/blob/main/programacion1Daw/src/main/java/practicas/SistemaPagoECommerce/readme.md#4-relaciones-entre-clases)
 5. [Plan de pruebas]()
    - [6.1. Ejemplo de funcionamiento.]()
    - [6.2. Pruebas final feliz.]()
-6. [Documentación Javadoc]([https://github.com/manuelaplanelles/Java/edit/main/programacion1Daw/src/main/java/practicas/SistemaPagoECommerce/readme.md#6-documentaci%C3%B3n-javadoc](https://github.com/manuelaplanelles/Java/blob/main/programacion1Daw/src/main/java/practicas/SistemaPagoECommerce/readme.md#6-documentaci%C3%B3n-javadoc))
+6. [Documentación Javadoc](https://github.com/manuelaplanelles/Java/blob/main/programacion1Daw/src/main/java/practicas/SistemaPagoECommerce/readme.md#6-documentaci%C3%B3n-javadoc)
 7. [Diagrama UML.]()
-8. [Conclusión.]([https://github.com/manuelaplanelles/Java/edit/main/programacion1Daw/src/main/java/practicas/SistemaPagoECommerce/readme.md#8-conclusi%C3%B3n](https://github.com/manuelaplanelles/Java/blob/main/programacion1Daw/src/main/java/practicas/SistemaPagoECommerce/readme.md#8-conclusi%C3%B3n))
+8. [Conclusión.](https://github.com/manuelaplanelles/Java/blob/main/programacion1Daw/src/main/java/practicas/SistemaPagoECommerce/readme.md#8-conclusi%C3%B3n)
     
 
 ---
