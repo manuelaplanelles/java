@@ -811,13 +811,17 @@ Creamos dos tarjetas: una con errores (número con letras y más de 16 dígitos,
 
 Creamos dos cuentas: una sin el arroba y con saldo insuficiente, y otra con "@" y saldo suficiente.
 
+
 ![Pruebas PayPal](./img/prueba_validarPayPal.png)
+
 
 #### 3. Comprobacion clase Bizum
 
 Creamos dos cuentas: una con menos de 9 dígitos para el teléfono e introducimos mal el PIN, y la otra correcta.
 
+
 ![Pruebas Bizum](./img/prueba_validarBizum.png)
+
 
 ### 5.2. Pruebas finales
 
@@ -831,9 +835,11 @@ Correcto:
 
 ![Pruebas tarjeta correcto](./img/prueba_metodoTarjetaCorrecto.png)
 
+
 Incorrecto:
 
 ![Pruebas tarjeta incorrecto](./img/prueba_metodoTarjetaIncorrecto.png)
+
 
 - **Pago con PayPal:**
 
@@ -841,9 +847,12 @@ Correcto:
 
 ![Pruebas PayPal correcto](./img/prueba_metodoPayPalCorrecto.png)
 
+
 Incorrecto:
 
+
 ![Pruebas PayPal incorrecto](./img/prueba_metodoPayPalInorrecto.png)
+
 
 - **Pago con Bizum:**
 
