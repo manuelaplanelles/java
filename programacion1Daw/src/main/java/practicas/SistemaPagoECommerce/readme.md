@@ -243,7 +243,7 @@ class TarjetaCredito extends MetodoPago{
 ```
 </details>
 
- [Comprobación]()
+ [Comprobación](https://github.com/manuelaplanelles/Java/blob/main/programacion1Daw/src/main/java/practicas/SistemaPagoECommerce/readme.md#1comprobacion-clase-tarjetacredito-creamos-dos-tarjetas-una-con-errores-tarjeta-con-letras-y-mas-de-16-digitos-y-tipo-tarjeta-no-valido-y-otra-tarjeta-correcta)
 
  
 #### Clase `Bizum`
