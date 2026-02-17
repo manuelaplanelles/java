@@ -5,10 +5,9 @@ import java.util.Arrays;
 
 public class EstructurasEjercicios {
     /*
-    Crea un Array con 5 valores e imprime su longitud.
+
     Modifica uno de los valores de Array e imprime el valor del índice antes y después de modificsrlo.
-    Crea un Array vacío.
-    Añade 4 valores al ArrayList y elimina uno a continuación.
+
     Crea un HashSet con 2 valores diferentes.
     Añade un nuevo valor repetido y otro sin repetir al HashSet.
     Elimina uno de los elementos del HashSet.
@@ -17,25 +16,27 @@ public class EstructurasEjercicios {
     Dado un Array, transfórmalo en un ArrayList, a continuación en un HasthSet y finalmente en un HashMap con clave y valor iguales.
      */
     static void main() {
+        //Crea un Array con 5 valores e imprime su longitud.
+            int[] num = {3, 5, 7, 10, 15};
+            System.out.println(num.length);
 
-        int[] num = {3, 5, 7, 10, 15};
-        System.out.println(num.length);
-
-        int[] vacio =new int[0];
+        //Crea un Array vacío.
+            int[] vacio =new int[0];
 
         ArrayList<String> nom =new ArrayList<String>();
         System.out.println(nom.size());
 
-        nom.add("Manuela");
-        nom.add("Planelles");
-        nom.add("Lucas");
-        nom.add("Alicante");
-        System.out.println(nom);
-        System.out.println(nom.size());
+        //Añade 4 valores al ArrayList y elimina uno a continuación.
+            nom.add("Manuela");
+            nom.add("Planelles");
+            nom.add("Lucas");
+            nom.add("Alicante");
+            System.out.println(nom);
+            System.out.println(nom.size());
 
-        nom.remove("Alicante");
-        System.out.println(nom);
-        System.out.println(nom.size());
+            nom.remove("Alicante");
+            System.out.println(nom);
+            System.out.println(nom.size());
 
 
 
