@@ -1,6 +1,6 @@
 package u06_herencia.Dispositivos;
 
-abstract class Dispositivo {
+public abstract class Dispositivo {
     String nombre;
     boolean estado;
 
@@ -8,10 +8,10 @@ abstract class Dispositivo {
         this.nombre = nombre;
         this.estado = false;
     }
-    abstract void encender();
+    public abstract void encender();
 
 
-    void apagar() {
+    public void apagar() {
         if (estado == false) {
             System.out.println(nombre + " ya está apagado.");
         } else {
@@ -19,11 +19,27 @@ abstract class Dispositivo {
             System.out.println(nombre + " apagado.");
         }
     }
-    void mostrarEstado() {
+    public void mostrarEstado() {
         if (estado) {
             System.out.println(nombre + " está encendido.");
         } else {
             System.out.println(nombre + " está apagado.");
         }
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public boolean isEstado() {
+        return estado;
+    }
+
+    public void setEstado(boolean estado) {
+        this.estado = estado;
     }
 }

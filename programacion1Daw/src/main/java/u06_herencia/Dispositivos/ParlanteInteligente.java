@@ -1,17 +1,18 @@
 package u06_herencia.Dispositivos;
 
-class ParlanteInteligente extends Dispositivo {
+public class ParlanteInteligente extends Dispositivo {
 
-    ParlanteInteligente(String nombre) {
+    public ParlanteInteligente(String nombre) {
+
         super(nombre);
     }
 
     @Override
     public void encender() {
-        if (estado) {
+        if (super.estado) {
             System.out.println("El parlante ya está encendido.");
         } else {
-            estado = true;
+            super.estado = true;
             System.out.println("Activando parlante con comando de voz...");
         }
     }

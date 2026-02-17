@@ -1,16 +1,16 @@
 package u06_herencia.Dispositivos;
 
-class Televisor extends Dispositivo implements ControlRemoto {
+public class Televisor extends Dispositivo implements ControlRemoto {
 
-    Televisor(String nombre) {
-        super(nombre); // llama al constructor del padre (Dispositivo)
+    public Televisor(String nombre) {
+        super(nombre);
     }
     @Override
     public void encender() {
-        if (estado) {
+        if (super.estado) {
             System.out.println("El televisor ya está encendido.");
         } else {
-            estado = true;
+            super.estado = true;
             System.out.println("Encendiendo televisor...");
         }
     }
