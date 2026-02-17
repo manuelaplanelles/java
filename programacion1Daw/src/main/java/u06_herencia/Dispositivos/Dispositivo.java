@@ -1,17 +1,29 @@
 package u06_herencia.Dispositivos;
 
-public abstract class Dispositivo {
+abstract class Dispositivo {
     String nombre;
     boolean estado;
 
-    public abstract void encender();
-
-
-    public boolean apagar(){
-
+    Dispositivo(String nombre) {
+        this.nombre = nombre;
+        this.estado = false;
     }
-    public void mostrarEstado(){
+    abstract void encender();
 
+
+    void apagar() {
+        if (estado == false) {
+            System.out.println(nombre + " ya está apagado.");
+        } else {
+            estado = false;
+            System.out.println(nombre + " apagado.");
+        }
     }
-
+    void mostrarEstado() {
+        if (estado) {
+            System.out.println(nombre + " está encendido.");
+        } else {
+            System.out.println(nombre + " está apagado.");
+        }
+    }
 }
