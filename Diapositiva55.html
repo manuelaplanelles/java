@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios DOM</title>
+</head>
+<body>
+    <h1>Ejercicios DOM</h1>
+    
+    <!-- EJERCICIO 0 -->
+    <p>Este es el primer párrafo del documento.</p>
+    <img src="..." alt="Imagen de ejemplo">
+    <p>Este es el segundo párrafo del documento.</p>
+    
+    <hr>
+    
+    <!-- EJERCICIO 1 -->
+    <p id="parrafo1">Este párrafo cambiará de tamaño y se centrará.</p>
+    <button onclick="cambiarParrafo()">Cambiar tamaño y centrar</button>
+    
+    <hr>
+    
+    <!-- EJERCICIO 2 -->
+    <p>Primer párrafo</p>
+    <p id="parrafo2">Segundo párrafo (se ocultará)</p>
+    <button onclick="esconderParrafo()">Esconder segundo párrafo</button>
+    
+    <hr>
+    
+    <!-- EJERCICIO 3 -->
+    <p id="texto">Hola, me llamo María y estudio DAW.</p>
+    <button onclick="traducir()">Traducir al inglés</button>
+
+    <script>
+        // Ejercicio 1
+        function cambiarParrafo() {
+            document.getElementById('parrafo1').style.fontSize = '36px';
+            document.getElementById('parrafo1').style.textAlign = 'center';
+        }
+
+        // Ejercicio 2
+        function esconderParrafo() {
+            document.getElementById('parrafo2').style.display = 'none';
+        }
+
+        // Ejercicio 3
+        function traducir() {
+            document.getElementById('texto').textContent = 'Hello, my name is Maria and I study DAW.';
+        }
+    </script>
+</body>
+</html>
