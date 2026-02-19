@@ -11,6 +11,6 @@ public class Metodos {
         }
         System.out.println(opcion.ordinal()); //indica la posición
         System.out.println(opcion.name());
-        
+
     }
 }
