@@ -1,6 +1,6 @@
 package basic;
 
-public class DataTypesEjercicios {
+public class DataTypesEjercicios02 {
     /*
     Declara una variable de tipo String y asígnale tu nombre.
     Crea una variable de tipo int y asígnale tu edad.

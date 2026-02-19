@@ -2,7 +2,7 @@ package basic;
 
 import java.util.ArrayList;
 
-public class EstructurasEjercicios {
+public class EstructurasEjercicios06 {
     /*
     Crea un HashSet con 2 valores diferentes.
     Añade un nuevo valor repetido y otro sin repetir al HashSet.

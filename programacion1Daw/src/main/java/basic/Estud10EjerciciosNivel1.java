@@ -1,4 +1,4 @@
-package miprimerjava;
+package basic;
 
 public class Estud10EjerciciosNivel1 {
     /*
