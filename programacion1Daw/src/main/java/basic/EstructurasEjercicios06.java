@@ -1,13 +1,9 @@
-package miprimerjava;
+package basic;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
-public class EstructurasEjercicios {
+public class EstructurasEjercicios06 {
     /*
-
-    Modifica uno de los valores de Array e imprime el valor del índice antes y después de modificsrlo.
-
     Crea un HashSet con 2 valores diferentes.
     Añade un nuevo valor repetido y otro sin repetir al HashSet.
     Elimina uno de los elementos del HashSet.
@@ -15,7 +11,8 @@ public class EstructurasEjercicios {
     Modifica uno de los contactos y elimina otro.
     Dado un Array, transfórmalo en un ArrayList, a continuación en un HasthSet y finalmente en un HashMap con clave y valor iguales.
      */
-    static void main() {
+    public static void main(String[] args){
+
         //Crea un Array con 5 valores e imprime su longitud.
             int[] num = {3, 5, 7, 10, 15};
             System.out.println(num.length);
@@ -38,6 +35,10 @@ public class EstructurasEjercicios {
             System.out.println(nom);
             System.out.println(nom.size());
 
+            //Modifica uno de los valores de Array e imprime el valor del índice antes y después de modificsrlo.
+            System.out.println(nom);
+            nom.set(0,"Manue");
+            System.out.println(nom);
 
 
 

@@ -11,16 +11,8 @@ package practicas.SistemaPagoECommerce;
  */
 public abstract class MetodoPago {
 
-    /**
-     * Constructor por defecto de MetodoPago
-     */
     public MetodoPago() {
     }
 
-    /**
-     * Procesa un pago con el método de pago específico
-     * Cada subclase debe implementar su propia lógica de procesamiento
-     * @param importe Cantidad en euros a pagar
-     */
     public abstract void procesarPago(double importe);
 }

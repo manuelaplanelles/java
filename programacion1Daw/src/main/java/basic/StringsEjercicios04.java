@@ -1,6 +1,6 @@
-package miprimerjava;
+package basic;
 
-public class StringsEjercicios {
+public class StringsEjercicios04 {
     /*
     Concatena dos cadenas de texto.
     Muestra la longitud de una cadena de texto.

@@ -1,6 +1,6 @@
-package miprimerjava;
+package basic;
 
-public class OperadoresEjercicios {
+public class OperadoresEjercicios03 {
     /*
     Crea una variable con el resultado de cada operación aritmetica.
     Crea una variable para cada tipo de operación de asignación

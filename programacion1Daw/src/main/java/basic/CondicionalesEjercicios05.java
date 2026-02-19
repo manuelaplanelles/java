@@ -1,6 +1,6 @@
-package miprimerjava;
+package basic;
 
-public class CondicionalesEjercicios {
+public class CondicionalesEjercicios05 {
     /*
     Establece la edad de un usuario y muestra si puede votar (mayor o igual a 18).
     Declara dos números y muestra cuál es mayor, o si son iguales.

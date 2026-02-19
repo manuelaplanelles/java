@@ -1,6 +1,6 @@
-package miprimerjava;
+package basic;
 
-public class HelloWorldEjercicios {
+public class HelloWorldEjercicios01 {
     //1. Imprime un mensaje que diga tu nombre en lugar de "¡Hola Mundo!"
     //2. Imprime dos lieas: "Hola" y luego "Mundo" con un solo println.
     //3. Añade un comentario sobre lo que hace cada linea del programa.
