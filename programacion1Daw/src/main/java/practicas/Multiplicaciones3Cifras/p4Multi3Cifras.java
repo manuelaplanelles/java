@@ -5,11 +5,8 @@ import java.util.Scanner;
 
 public class p4Multi3Cifras {
 
-
     public static void main(String[] args) {
-
         menu();
-
     }
     public static void menu(){
         Scanner teclado = new Scanner(System.in);
