@@ -89,8 +89,8 @@ public class EjerciciosBucles {
         int contador = 0;
         for (int i = 1; i <= sumaNum; i ++){
             System.out.println("Introduce nº" + i);
-            int num = teclado.nextInt();
-            contador += num;
+            int num1 = teclado.nextInt();
+            contador += num1;
         }
         System.out.println("El resultado es: "+ contador);
 
@@ -99,11 +99,11 @@ public class EjerciciosBucles {
         */
         System.out.println("Indica numero factorial: ");
         int factorial = teclado.nextInt();
-        int contador = 1;
+        int contador2 = 1;
         for (int i = factorial; i >= 1; i --){
             contador *= i;
         }
-        System.out.println(contador);
+        System.out.println(contador2);
 
 
         /*
