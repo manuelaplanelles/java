@@ -41,6 +41,7 @@ public class EjerciciosArrays {
         /*
         Ejercicio 2. Invierte un array: Crea un array de números enteros (los que quieras) y luego invierte sus
         elementos. Imprime el array invertido.
+
             Array original: 1, 2, 3, 4, 5
             Array invertido: 5, 4, 3, 2, 1
          */
