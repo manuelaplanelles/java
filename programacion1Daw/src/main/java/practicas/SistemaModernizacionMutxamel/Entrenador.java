@@ -7,7 +7,7 @@ public class Entrenador extends MutxamelFC implements AccionesDeportivas{
     public Entrenador(String nombre, int edad, Equipos equipos, String formacionPreferida){
         super(nombre, edad);
         this.equipos = equipos;
-    this.formacionPreferida=formacionPreferida;
+        this.formacionPreferida=formacionPreferida;
     }
 
     public void planificarEntrenamiento(){

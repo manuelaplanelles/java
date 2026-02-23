@@ -24,6 +24,8 @@ abstract class MutxamelFC implements FuncionesIntegrantes{
         System.out.println(nombre + " grita ¡GOOOL!");
     }
 
+
+
     public String getNombre() {
         return nombre;
     }

@@ -10,9 +10,12 @@ public class Masajista extends MutxamelFC{
         this.anyosExperiencia=anyosExperiencia;
     }
 
+
+
     public void darMasaje(Jugador jugador){
         System.out.println(this.nombre + " esta recubiendo un masaje.");
     }
+
 
     public String getTitulacion() {
         return titulacion;
@@ -29,6 +32,8 @@ public class Masajista extends MutxamelFC{
     public void setAnyosExperiencia(int anyosExperiencia) {
         this.anyosExperiencia = anyosExperiencia;
     }
+
+
 
     @Override
     public void concentrarse() {

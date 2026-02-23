@@ -47,6 +47,7 @@ public class Jugador extends MutxamelFC implements AccionesDeportivas{
         this.categoria = categoria;
     }
 
+
     @Override
     public void entrenar() {
         System.out.println( this.nombre + "esta entrenando para la posción " + posiciones);
