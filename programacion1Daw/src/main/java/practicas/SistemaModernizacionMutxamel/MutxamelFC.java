@@ -1,12 +1,27 @@
-package practicas.SistemaModernizacionMutzamel;
+package practicas.SistemaModernizacionMutxamel;
 
 abstract class MutxamelFC implements FuncionesIntegrantes{
-    String nombre;
-    int edad;
+    public String nombre;
+    public int edad;
 
     public MutxamelFC(String nombre, int edad){
         this.nombre=nombre;
         this.edad=edad;
+    }
+
+    @Override
+    public void concentrarse() {
+        System.out.println(nombre + " se esta concentrando.");
+    }
+
+    @Override
+    public void viajar(String ciudad) {
+        System.out.println(nombre + " viaja a " + ciudad);
+    }
+
+    @Override
+    public void celebrarGol() {
+        System.out.println(nombre + " grita ¡GOOOL!");
     }
 
     public String getNombre() {

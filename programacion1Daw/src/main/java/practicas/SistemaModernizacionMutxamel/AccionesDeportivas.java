@@ -1,8 +1,9 @@
-package practicas.SistemaModernizacionMutzamel;
+package practicas.SistemaModernizacionMutxamel;
 
 public interface AccionesDeportivas {
 
     void entrenar();
     void jugarPartido(String rival);
+
 
 }

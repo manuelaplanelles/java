@@ -1,4 +1,4 @@
-package practicas.SistemaModernizacionMutzamel;
+package practicas.SistemaModernizacionMutxamel;
 
 public interface FuncionesIntegrantes {
         void concentrarse();
