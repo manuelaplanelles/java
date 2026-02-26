@@ -1,8 +1,11 @@
 package practicas.SistemaModernizacionMutxamel;
 
+import java.util.ArrayList;
+
 public class Masajista extends MutxamelFC{
     private String titulacion;
     private int anyosExperiencia;
+    public static ArrayList<Masajista> listaMasajistas = new ArrayList<>();
 
     public Masajista(String nombre, int edad, String titulacion, int anyosExperiencia){
         super(nombre, edad);
@@ -33,7 +36,13 @@ public class Masajista extends MutxamelFC{
         this.anyosExperiencia = anyosExperiencia;
     }
 
+    public static ArrayList<Masajista> getListaMasajistas() {
+        return listaMasajistas;
+    }
 
+    public static void setListaMasajistas(ArrayList<Masajista> listaMasajistas) {
+        Masajista.listaMasajistas = listaMasajistas;
+    }
 
     @Override
     public void concentrarse() {
