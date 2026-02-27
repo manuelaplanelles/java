@@ -50,7 +50,7 @@ La aplicación se divide en dos partes:
 
 El objetivo es aplicar los conceptos de POO vistos en clase. Por un lado el documento pide desarrollar un software de mantenimiento para el club siguiendo un diagrama UML concreto, con excepciones personalizadas y dos aplicaciones principales. Por otro lado la profesora pide que se trabajen los siguientes conceptos:
 - Herencia: Jugador, Entrenador, Masajista y Acompanyante heredan de MutxamelFC
-- Clase abstracta: MutxamelFC como base común que no se puede instanciar
+- Clase abstracta: MutxamelFC como base común
 - Interfaces: FuncionesIntegrantes y AccionesDeportivas
 - Enums: Equipos y Posiciones
 - Excepciones personalizadas: dorsal duplicado y formato de formación incorrecto
