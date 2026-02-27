@@ -37,7 +37,7 @@
 ## 1. Introducción
 
 
-<p align="right"><a href="(https://github.com/manuelaplanelles/Java/edit/main/programacion1Daw/src/main/java/practicas/SistemaModernizacionMutxamel/readme.md#%C3%ADndice)">Ir al Índice</a></p>
+<p align="right"><a href="#índice">Ir al Índice</a></p>
 
 ---
 
@@ -45,7 +45,7 @@
 
 La práctica persigue los siguientes objetivos:
 
-<p align="right"><a href="(https://github.com/manuelaplanelles/Java/edit/main/programacion1Daw/src/main/java/practicas/SistemaModernizacionMutxamel/readme.md#%C3%ADndice)">Ir al Índice</a></p>
+<p align="right"><a href="#índice">Ir al Índice</a></p>
 
 ---
 
