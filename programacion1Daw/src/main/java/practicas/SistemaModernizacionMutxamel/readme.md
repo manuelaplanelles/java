@@ -35,7 +35,7 @@
 ---
 ---
 ## 1. Introducción
-
+Esta aplicación simula el sistema de gestión del MUTXAMEL FC, un club de fútbol local que se ha clasificado para la Copa del Rey contra el Real Madrid. El objetivo es modernizar su organización mediante un software desarrollado en Java con Programación Orientada a Objetos.
 
 <p align="right"><a href="#índice">Ir al Índice</a></p>
 
@@ -43,7 +43,19 @@
 
 ## 2. Objetivos de la práctica
 
-La práctica persigue los siguientes objetivos:
+La aplicación cubre dos partes principales:
+
+- AppMutxamelFC: simula el día a día del club, desde la concentración hasta la celebración del gol.
+- AppMantenimiento: permite gestionar los integrantes del club mediante un menú interactivo.
+
+Los puntos trabajados en la práctica son:
+
+- Herencia: clases que extienden de MutxamelFC
+- Polimorfismo: cada clase implementa los métodos a su manera ("falta")
+- Clase abstracta: MutxamelFC como base común
+- Interfaces: FuncionesIntegrantes y AccionesDeportivas
+- Enums: Equipos y Posiciones
+- Excepciones personalizadas: dorsal duplicado y formato de formación incorrecto
 
 <p align="right"><a href="#índice">Ir al Índice</a></p>
 
@@ -239,6 +251,16 @@ La práctica persigue los siguientes objetivos:
 **Jerarquía de herencia:**
 
 **Explicación de las relaciones:**
+
+La clase base es MutxamelFC, una clase abstracta que contiene los atributos comunes nombre y edad. Implementa la interfaz FuncionesIntegrantes, lo que obliga a todas sus subclases a saber concentrarse, viajar y celebrar goles.
+
+De MutxamelFC heredan Jugador, Entrenador, Masajista y Acompanyante. Esto significa que todas comparten nombre y edad sin necesidad de repetirlos.
+
+Jugador y Entrenador además implementan AccionesDeportivas, por lo que ambos saben entrenar y jugar partidos, aunque cada uno lo hace a su manera.
+
+Jugador usa los enums Equipos y Posiciones para definir su categoría y posición en el campo. Entrenador usa Equipos para saber qué equipo dirige.
+
+Acompanyante tiene una relación especial con Jugador, ya que contiene una referencia al jugador al que acompaña y su parentesco con él.
 
 <p align="right"><a href="#índice">Ir al Índice</a></p>
 
