@@ -54,7 +54,7 @@ El objetivo es aplicar los conceptos de POO vistos en clase. Por un lado el docu
 - Interfaces: FuncionesIntegrantes y AccionesDeportivas
 - Enums: Equipos y Posiciones
 - Excepciones personalizadas: dorsal duplicado y formato de formación incorrecto
-- Polimorfismo: ⚠️ Este concepto no se ha llegado a implementar correctamente en la práctica
+- Polimorfismo: ⚠️ Este concepto no se ha llegado a implementar
 
 <p align="right"><a href="#índice">Ir al Índice</a></p>
 
