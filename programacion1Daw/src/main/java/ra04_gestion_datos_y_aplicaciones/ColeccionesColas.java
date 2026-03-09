@@ -61,6 +61,6 @@ public class ColeccionesColas {
 
        //ejercicio4
         Queue<String> compra = new LinkedList<>();
-        
+
     }
 }
