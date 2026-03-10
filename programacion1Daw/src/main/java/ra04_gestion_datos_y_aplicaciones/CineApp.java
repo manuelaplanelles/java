@@ -5,7 +5,7 @@ import java.util.Queue;
 import java.util.Random;
 
 public class CineApp {
-    static Random aleatorio = new Random();
+    /*static Random aleatorio = new Random();
     static Queue<Espectador> cola = new LinkedList<>();
     public static void main(String[] args) {
         generarCola();
@@ -29,4 +29,6 @@ public class CineApp {
             cola.offer(new Espectador(edad.aleatorio.nextInt(97)+3));
         }
     }
+
+     */
 }
