@@ -1,5 +1,7 @@
 package ra04_gestion_datos_y_aplicaciones.u07_coleccioneDinámicasDatos.E3_TareasFuncionario;
 
+import java.util.Objects;
+
 public class Informe {
     private int codigo;
     private Descripcion descripcion;
@@ -32,5 +34,17 @@ public class Informe {
                 "codigo=" + codigo +
                 ", descripcion=" + descripcion +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Informe informe = (Informe) o;
+        return codigo == informe.codigo && descripcion == informe.descripcion;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(codigo, descripcion);
     }
 }
