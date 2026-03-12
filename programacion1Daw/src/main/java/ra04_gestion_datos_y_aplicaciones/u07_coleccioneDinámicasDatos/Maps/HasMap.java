@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-public class HasMap<S, I extends Number> {
+/*public class HasMap<S, I extends Number> {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
 
@@ -24,7 +24,7 @@ public class HasMap<S, I extends Number> {
 
          */
 
-        //ejercicio1
+        /*ejercicio1
         System.out.println("Introduce una frase: ");
         String frase = teclado.nextLine().toLowerCase();
 
@@ -61,5 +61,5 @@ public class HasMap<S, I extends Number> {
             }
 
              */
-        }
-    }
+
+
