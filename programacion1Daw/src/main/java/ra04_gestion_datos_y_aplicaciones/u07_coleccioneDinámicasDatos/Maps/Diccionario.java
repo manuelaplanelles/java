@@ -1,50 +1,83 @@
 package ra04_gestion_datos_y_aplicaciones.u07_coleccioneDinámicasDatos.Maps;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
-    public class Diccionario {
-        static HashMap<String, String> map = new HashMap<>();
-        static Scanner teclado = new Scanner(System.in);
+public class Diccionario {
+    static HashMap<String, String> map = new HashMap<>();
+    static Scanner teclado = new Scanner(System.in);
 
-        public static void main(String[] args) {
+    public static void main(String[] args) {
+        System.out.println("*** Diccionario Español - Ingles ***");
 
+        map = getMap();
+
+        int preguntas = 0;
+        int aciertos = 0;
+        int errores = 0;
+
+        while (true) {
+            String palabraAleat = palabrasAleatorias();
+            System.out.println(palabraAleat + ": " + primeraLetraTraduccion(palabraAleat) + "...");
+            System.out.println("Indique la respuesta:");
+            String respuesta = teclado.next();
+
+            if (respuesta.equals("fin")) {
+                break;
+            }
+
+            preguntas++;
+            String correcta = traduce(palabraAleat, respuesta);
+
+            if (respuesta.equals(correcta)) {
+                aciertos++;
+            } else {
+                errores++;
+            }
         }
 
-        public static void nuevoPar(String espanyol, String ingles) {         //no
+        int porcentaje = 0;
+        if (preguntas > 0) {
+            porcentaje = (aciertos * 100) / preguntas;
         }
 
-        public static void traduce(String espanyol) {
-            System.out.println("Indica la palabra en español que quieres traducir: ");
-            String palEsp = teclado.next().toLowerCase();
-            
+        System.out.println("FIN DEL PROGRAMA");
+        System.out.println("Total preguntas: " + preguntas);
+        System.out.println("Total aciertos: " + aciertos);
+        System.out.println("Total errores: " + errores);
+        System.out.println("Aciertos: " + porcentaje + "%");
+    }
 
+    public static void nuevoPar() {
+    }
+
+    public static String traduce(String palabraAleat, String respuesta) {
+        String palabraIngles = map.get(palabraAleat);
+        if (respuesta.equals(palabraIngles)) {
+            System.out.println("¡CORRECTO!");
+        } else {
+            System.out.println("¡NO! La respuesta correcta es " + palabraIngles);
         }
+        return palabraIngles;
+    }
 
-        public static void palabrasAleatorias() {
-            List<String> claves = new ArrayList<>(map.keySet());
-            Random random = new Random();
-            String palabra = claves.get(random.nextInt(claves.size()));
-            System.out.println("Palabra aleatoria: " + palabra);
+    public static String palabrasAleatorias() {
+        List<String> claves = new ArrayList<>(map.keySet());
+        Random random = new Random();
+        String palabraAleat = claves.get(random.nextInt(claves.size()));
+        return palabraAleat;
+    }
 
-        }
+    public static String primeraLetraTraduccion(String palabraAleat) {
+        String primerLet = String.valueOf(map.get(palabraAleat).charAt(0));
+        return primerLet;
+    }
 
-        public static void primeraLetraTraduccion(String espanyol){
-            System.out.println("Indica la palabra en español: ");
-            String palEsp = teclado.next().toLowerCase();
-            String traduccion = map.get(palEsp);
-            String primeraLetra = String.valueOf(traduccion.charAt(0));
-            System.out.println("La primera letra en inglés es: " + primeraLetra);
+    public static HashMap<String, String> getMap() {
+        HashMap<String, String> map = new HashMap<>();
 
-        }
-
-
-        public static HashMap<String, String> getMap() {
-                    HashMap<String, String> map = new HashMap<>();
-                    HashMap<String, String> diccionario = getMap();
 
                     // A
                     map.put("abandonar", "abandon");
