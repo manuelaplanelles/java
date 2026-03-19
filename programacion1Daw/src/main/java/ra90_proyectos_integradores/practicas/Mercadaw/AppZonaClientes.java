@@ -3,19 +3,19 @@ package ra90_proyectos_integradores.practicas.Mercadaw;
 public class AppZonaClientes {
 
 
-    public class AppZonaCliente(){
+    public static void main(String[] args) {
 
     }
-    public class void autentificacion(){
+    public void autentificacion(){
 
     }
-    public class void iniciarCompra(){
+    public void iniciarCompra(){
 
     }
-    public class void imprimirProductos(){
+    public void imprimirProductos(){
 
     }
-    public class void imprimirDespedida(){
+    public void imprimirDespedida(){
 
     }
 }
